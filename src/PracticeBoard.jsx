@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import { Chessboard } from 'react-chessboard'
 import { useDrill } from './useDrill'
 
@@ -7,19 +7,25 @@ const FEEDBACK_DURATION_MS = 1500
 export function PracticeBoard({ lines }) {
   const { fen, moveHistory, isUserTurn, expectedMove, handleUserMove, restart } = useDrill(lines)
   const [feedback, setFeedback] = useState(null) // null | { correct: boolean, message: string }
+  const lockedRef = useRef(false)
+  const feedbackTimerRef = useRef(null)
 
   const onPieceDrop = useCallback((sourceSquare, targetSquare) => {
-    if (!isUserTurn) return false
+    if (!isUserTurn || lockedRef.current) return false
 
     const result = handleUserMove(sourceSquare, targetSquare)
 
     if (result.correct) {
       setFeedback({ correct: true, message: 'Correct!' })
-      setTimeout(() => setFeedback(null), FEEDBACK_DURATION_MS)
+      clearTimeout(feedbackTimerRef.current)
+      feedbackTimerRef.current = setTimeout(() => setFeedback(null), FEEDBACK_DURATION_MS)
       return true
     } else {
+      lockedRef.current = true
       setFeedback({ correct: false, message: `Wrong! Correct move: ${result.correctMove}` })
-      setTimeout(() => {
+      clearTimeout(feedbackTimerRef.current)
+      feedbackTimerRef.current = setTimeout(() => {
+        lockedRef.current = false
         setFeedback(null)
         restart()
       }, FEEDBACK_DURATION_MS)

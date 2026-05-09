@@ -48,7 +48,7 @@ export function useDrill(lines) {
       const next = initLine(lines)
       stateRef.current = next
       setFen(next.chess.fen())
-      setMoveHistory([...chess.history()])
+      setMoveHistory([])
       setIsUserTurn(true)
     } else {
       setMoveHistory([...chess.history()])

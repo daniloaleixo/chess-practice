@@ -2,6 +2,7 @@ import { renderHook, act } from '@testing-library/react'
 import { useDrill } from './useDrill'
 
 const singleLine = ['1. d4 Nf6']
+const twoMoveLine = ['1. d4 Nf6 2. c4']
 
 describe('useDrill', () => {
   it('starts with isUserTurn true (White moves first)', () => {
@@ -31,7 +32,8 @@ describe('useDrill', () => {
   })
 
   it('advances moveHistory after a correct White move', () => {
-    const { result } = renderHook(() => useDrill(singleLine))
+    // Use a two-White-move line so d4 doesn't complete the line mid-sequence
+    const { result } = renderHook(() => useDrill(twoMoveLine))
     act(() => {
       result.current.handleUserMove('d2', 'd4')
     })
@@ -50,7 +52,7 @@ describe('useDrill', () => {
     expect(result.current.isUserTurn).toBe(true)
   })
 
-  it('isUserTurn is false immediately after a correct move while Black auto-plays', () => {
+  it('isUserTurn is true after correct move and Black auto-play completes synchronously', () => {
     // After correct White move, hook should auto-apply Black move synchronously in test
     const { result } = renderHook(() => useDrill(singleLine))
     act(() => {
