@@ -2,7 +2,6 @@ import { renderHook, act } from '@testing-library/react'
 import { useDrill } from './useDrill'
 
 const singleLine = ['1. d4 Nf6']
-const twoLines = ['1. d4 Nf6 2. c4', '1. d4 d5 2. c4']
 
 describe('useDrill', () => {
   it('starts with isUserTurn true (White moves first)', () => {

@@ -42,16 +42,16 @@ export function useDrill(lines) {
     }
 
     setFen(chess.fen())
-    setMoveHistory([...chess.history()])
 
     if (idx >= moves.length) {
-      // Line complete — start a new one but keep completed moveHistory visible
+      // Line complete — start a new one
       const next = initLine(lines)
       stateRef.current = next
       setFen(next.chess.fen())
-      // Keep moveHistory showing the completed line (includes all moves like d4, Nf6)
+      setMoveHistory([...chess.history()])
       setIsUserTurn(true)
     } else {
+      setMoveHistory([...chess.history()])
       stateRef.current.moveIndex = idx
       setIsUserTurn(true)
     }
@@ -76,7 +76,6 @@ export function useDrill(lines) {
     chess.move({ from, to, promotion: 'q' })
     stateRef.current.moveIndex = moveIndex + 1
 
-    setIsUserTurn(false)
     applyBlackMoves(chess, moves, moveIndex + 1)
 
     return { correct: true, correctMove: null }
