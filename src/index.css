@@ -65,9 +65,30 @@ body {
   font-weight: bold;
 }
 
+.eval-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.eval-score {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.eval-white {
+  color: #f0f0f0;
+}
+
+.eval-black {
+  color: #e94560;
+}
+
 .board-wrapper {
-  border-radius: 4px;
-  overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 

@@ -6,7 +6,7 @@ export default function App() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('/repertoire.json')
+    fetch('/repertoire-with-eval.json')
       .then((r) => r.json())
       .then((data) => setLines(data.lines))
       .catch(() => setError('Failed to load repertoire.json'))
