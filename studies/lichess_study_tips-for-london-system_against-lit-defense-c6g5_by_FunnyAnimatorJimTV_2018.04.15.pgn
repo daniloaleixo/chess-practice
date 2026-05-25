@@ -1,0 +1,23 @@
+[Event "🐸Tips for London System🐸: Against Lit Defense (c6+g5)"]
+[Date "2018.04.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "🐸Tips for London System🐸"]
+[ChapterName "Against Lit Defense (c6+g5)"]
+[ChapterURL "https://lichess.org/study/NboFy7hm/wjh0PmCZ"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.04.15"]
+[UTCTime "03:26:34"]
+
+1. d4 Nf6 2. Bf4 { Now let's take a look at 2...c6.
+This c6 move became theorized by two lichess users, @Water_Flame and @SirDillyMoves. It has recently become very, very popular, so it's critical that you are prepared.
+The two users made a study of their own on this clever idea. You may check their study out here: https://lichess.org/study/z7zyHqgV } { [%csl Gc6][%cal Gc7c6] } 2... c6 { This looks like a pretty quiet move, and you may be thinking black wants to get a passive Slav structure. But black's sneaky idea is that if white plays e3, black can pounce with g5. It looks wacky, I know, but believe it or not there is no refutation to it.
+As white, we should try to avoid the complications of this g5 idea. So in this case I'm recommending you play 3.c3 here. } { [%csl Bc6,Gc3][%cal Re2e3,Rg7g5,Gc2c3] } 3. c3 { We continue with our idea of building a pyramid; we just start with c3 in this case.
+What the move c3 does is it rules g5 out because we would simply be able to take that pawn for free, and when black plays Qa5 our king will not be checked. } { [%csl Gc3,Ge3][%cal Rg7g5,Ge2e3] } (3. e3 g5!! { g5! If we take the pawn, black plays Qa5+ winning the bishop
+This is not losing for white, but black has the initiative and there are complications, so that's why I recommend you play 3.c3 } { [%csl Gg5][%cal Rf4g5,Rd8a5,Ya5e1,Ya5g5] }) 3... Qb6 (3... d5 4. e3 Bf5 5. Bd3 Bxd3 6. Qxd3 e6 7. Nd2 Bd6 8. Bxd6 Qxd6 9. Ngf3 Nbd7) 4. Qc2 d5 { [%cal Gb1d2,Ga2a4,Ga4a5] } 5. Nd2 { And now white is, for the most part, back into normal London System structures.
+Maybe white doesn't have a huge advantage here, but we get our nice easy-to-play position and black didn't get the chance to pull out a huge bag of tricks. } 5... g6 6. e3 Bf5 7. Bd3 Bxd3 8. Qxd3 { If black ever takes on b2 then you can play Rb1 and you should be OK } { [%cal Rb6b2,Ra1b1] } 8... Bg7 (8... Qxb2 9. Rb1 Qxa2 10. Rxb7 Nbd7 11. Ngf3 Bg7 (11... Qa1+ 12. Rb1 Qa5 13. O-O Bg7) 12. O-O O-O 13. Nb3 a5 14. Ra1 Qb2 { If you are playing a higher rated player, you can get a forced draw with Rb1 Ra1 repeat } { [%cal Ba1b1,Bb1a1] } 15. Nfd2 { Guarding the e4 square from black's knight } { [%csl Re4][%cal Rd2e4,Gf6e4] }) 9. Ngf3 Nbd7 10. O-O O-O 11. h3 { Normal London System position- white has a small advantage here- all the pieces are out and white has no weaknesses
+The pawn break e4 is coming } { [%csl Bf3,Bf4,Bd3,Bd2,Ge4,Ge1][%cal Ge3e4,Gf1e1] } *
+
+

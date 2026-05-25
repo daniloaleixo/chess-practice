@@ -1,0 +1,27 @@
+[Event "🍄 Ideas in the London System 🍄: Introduction"]
+[Date "2018.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "Introduction"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/E9SccSB6"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.03.22"]
+[UTCTime "01:33:25"]
+
+{ Hi! You've probably heard about an opening for white called the London System. In this study, I will teach you the basics of this popular opening.
+ADVANCED PLAYERS -> see the final chapter.
+
+If you enjoy this study please click the heart button
+(under the h1 square). Thanks!
+
+Please check out my new 2022 study where I'm learning the Classical Sicilian https://lichess.org/study/nrGAXGfg Thank you! :) }
+1. d4 { We will be starting with d4. It is not as aggressive as e4 can be but d4 is a good middleground between aggressive and solid games.
+To start off as an example I will show you the ideas where black plays 1...d5. 1...Nf6 is a popular choice as well. } { [%cal Bd7d5,Bg8f6] } 1... d5 2. Bf4 { This is the trademark move of the London Opening, where you play d4 and Bf4. The idea is to build a solid pyramid in the center with e3 and c3, and the bishop on f4 will be very well placed.
+This is as far as I will go for this chapter. In the next few chapters I will go into more detail on the ideas.
+PLEASE DON'T STOP HERE. Continue through the next 14 chapters (in the top left corner)
+Note: If you want to see a more advanced course on the London I highly recommend IM Alex Banzea's free London System playlist on youtube. He goes into detail about many of the modern move orders and more challenging ideas from black. } { [%csl Ge3,Gc3,Bf4][%cal Ge2e3,Gc2c3] } *
+
+

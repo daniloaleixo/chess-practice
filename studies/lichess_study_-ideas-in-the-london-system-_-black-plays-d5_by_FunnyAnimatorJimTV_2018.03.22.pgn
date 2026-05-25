@@ -1,0 +1,18 @@
+[Event "🍄 Ideas in the London System 🍄: - Black plays D5"]
+[Date "2018.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "- Black plays D5"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/WOEDgrA0"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.03.22"]
+[UTCTime "01:57:15"]
+
+{ And now in the next few chapters I'm going to go over the specific variations on what black can play against the London Opening and I will tell you the ideas. We will start out with 1.d4 d5. }
+1. d4 d5 { We've already talked about this a fair bit but I'd just like to go over a few extra things before we move on to 1...Nf6. } 2. Bf4 { Okay so black can play this early c5 move and I talk about this Nf6 + c5 on move 2 setup in more detail on chapter 9. } { [%cal Bc7c5] } (2. Nf3 Nf6 3. Bf4 e6 4. e3) 2... c5 (2... e6 3. e3) 3. e3 { Building our pyramid } { [%csl Re3,Rd4,Rf2,Rc3,Rb2][%cal Rc2c3] } 3... Nf6 4. c3 Nc6 { In chapter 2, The Essential Ideas, I recommended you play Nd2 before Nf3. If you're wondering why that is, I encourage you check out the sideline 5.Nf3 to see what happens. } { [%csl Gd2,Rf3][%cal Gb1d2,Rg1f3] } 5. Nd2 (5. Nf3 { This is a very common mistake. Many London Opening players are playing Nf3 either right here or even before they build the pyramid. It looks like the most natural developing move, however there is a flaw with it. } 5... Qb6 { Black can now go Qb6, hitting b2. } { [%csl Rb2,Ra1][%cal Rb6b2] } 6. Qb3 { This is the way you're supposed to meet Qb6; with Qb3. If black takes your queen then you get an open a-file. } { [%csl Gb3][%cal Gd1b3,Bb6b3,Ba2b3] } 6... c4 { But now black plays this forcing move c4. And of course you don't want to exchange queens because then you allow black to open the a-file for himself } { [%csl Rb6][%cal Rc5c4,Rb3b6,Ra7b6] } 7. Qc2 { So we play Qc2. And if black allows (say for example if black plays a bad move like e6), then white is going to play b3 and you will have the better pawn structure. However... } { [%csl Gc2][%cal Gb2b3,Re7e6] } 7... Bf5 { Black has this very crafty move Bf5.
+(Continue to next move) } { [%csl Bf5,Ra1][%cal Bc2f5,Rb6b2,Rb2a1] } 8. Qxf5 Qxb2 { Okay...So remember how I told you to develop Nd2 before Nf3? Well, now we can see why. Imagine in this position if we had the knight on d2 instead of the Nf3. Well, the rook wouldn't be trapped! It could escape to b1, and black's Bf5 move would be a blunder; white would be up a piece! } { [%csl Rf3,Ga1][%cal Ga1b1,Gb1d2,Yc8f5,Rg1f3] }) 5... Qb6 { Okay so this is a move I wanted to talk about a bit. Black's idea with the c5 move was for the queen to come to b6 and attack the b2 pawn. This is a move you need to watch out for in the London System, but if you know how to meet it then you're ok. } { [%csl Rb2,Rf4][%cal Rd8b6,Rb6b2,Yf4c1] } 6. Qb3 { Each side is hoping the other side will take the queen, in which case the a-file will be opened up. } { [%cal Rb3b6,Rb6b3,Ga2b3,Ga7b6] } 6... c4 { Here black tries to force white to trade queens, but we will just move to c2. } { [%cal Rc5c4] } (6... Bf5 7. dxc5) 7. Qc2 { And now black has to deal with the white pawn breaks b3 and e4. White is better because he has the active pawn breaks, and black's c5-c4 gaining-space move is, in fact, a passive move. } { [%csl Gb3,Ge4][%cal Gb2b3,Ge3e4] } 7... e6 (7... Bf5 8. Qxf5 Qxb2 9. Qb1 Qxc3 10. Ne2 Qb4 11. Qc1 Ne4 12. f3 Qxd2+ 13. Qxd2 Nxd2 14. Kxd2) 8. b3 { There it goes with our pawn break b3. White gets a very good game } 8... cxb3 9. axb3 { White has the better pawn structure } { [%csl Gb3,Gc3,Gd4,Ge3,Gf2,Gg2,Gh2,Ra7,Rb7,Rd5][%cal Gc3c4,Gc4d5] } *
+
+

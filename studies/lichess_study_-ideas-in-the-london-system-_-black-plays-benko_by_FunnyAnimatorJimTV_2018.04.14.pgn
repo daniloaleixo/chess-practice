@@ -1,0 +1,17 @@
+[Event "🍄 Ideas in the London System 🍄: - Black Plays Benko"]
+[Date "2018.04.14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "- Black Plays Benko"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/wmu0bOgR"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.04.14"]
+[UTCTime "16:24:50"]
+
+1. d4 Nf6 2. Bf4 c5 { The Benoni Systems } { [%cal Rc7c5] } 3. d5 { White's best choice } { [%csl Gd5] } 3... b5 { Here black plays this b5 move, as it is iconic in the Benko Gambit. You may encounter this move if you're playing against a Benko Gambit player. White should not fear. } { [%csl Rb5,Rc5,Rf6][%cal Rb7b5,Rc7c5,Rg8f6] } 4. a4 { First we provoke the pawn forward. } { [%cal Ba2a4,Ra4b5] } 4... b4 5. f3 { And now, I think this is white's best choice. f3 prepares e4. } { [%csl Gf3][%cal Ge2e4] } 5... d6 (5... e6 6. e4 exd5 7. exd5 Qe7+ 8. Kf2) (5... Nh5 6. Bg5 h6 7. Bh4 d6 8. e4 g5 9. Bf2) 6. e4 Nbd7 { Now that we controlled the center, we need to develop our pieces. } { [%csl Ge4,Gd5,Gf3,Bb1,Bd1,Bf1,Bg1] } 7. Nd2 { The knight controls the weakened light squares } { [%csl Yc4,Yb3][%cal Yd2c4,Yd2b3] } 7... g6 8. Nc4 { Preparing to play Qd2 and Bh6 } { [%csl Bd2][%cal Bd1d2,Yd2h6] } 8... Bg7 9. Qd2 O-O 10. Bh6 { Exchanging off black's painful dark squared bishop } { [%csl Rg7][%cal Yh8b2] } 10... Ne8 11. Bd3 { White has a small edge here, a space advantage and black will lose their best piece
+But as white you need to be a little prepared for black's counterplay with f7-f5 } { [%csl Ge2,Rg7][%cal Gg1e2,Rf7f5,Rf5e4,Gg1h3] } *
+
+

@@ -1,0 +1,16 @@
+[Event "London System Repertoire: London System vs Bf5"]
+[Date "2018.05.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "London System Repertoire"]
+[ChapterName "London System vs Bf5"]
+[ChapterURL "https://lichess.org/study/2EaSmZtz/dViPOIs1"]
+[Annotator "https://lichess.org/@/davidharoldchess"]
+[UTCDate "2018.05.19"]
+[UTCTime "06:31:45"]
+
+1. d4 d5 2. Bf4 Bf5 { We've all seen it - your opponent goes for the old "mirror their moves until they make a mistake" trick when they don't know your opening. No matter their reason, this is not a refutation of the London. } 3. e3 e6 4. Bd3! { Swapping bishops is the way to go here. } 4... Bxd3 5. Qxd3 { And now we just continue the London setup as per usual. } 5... Nf6 { In Carlsen - Giri, c6 was played instead here but Nf6 is good too. } 6. Nf3 c5 7. c3 Nc6 (7... c4?! { Different opening moves, still allows for b3 and e4 pawn breaks! } 8. Qe2 { [%csl Gb3,Ge4,Rd5,Rc4][%cal Gb2b3,Ge3e4,Re4d5,Rb3c4] } 8... Nc6 9. Nbd2 { Now b3 is on the cards. }) 8. Nbd2 Bd6 9. Bg3 Bxg3 10. hxg3 O-O? { Perfectly natural, but white has a clear edge here, with a number of good plans. Better is Qb6. Either way, it's typical London play from here. } { [%csl Ge5,Gf3,Rh7,Rg5,Rg4,Rg3,Ge1][%cal Gf3e5,Gd2f3,Ge1g1,Rh1h7,Rd3h7,Rg3g4,Rg4g5,Ge1c1] } *
+
+

@@ -1,0 +1,17 @@
+[Event "London System Repertoire: London System vs Ne4"]
+[Date "2018.05.19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "London System Repertoire"]
+[ChapterName "London System vs Ne4"]
+[ChapterURL "https://lichess.org/study/2EaSmZtz/ECcMwyyJ"]
+[Annotator "https://lichess.org/@/davidharoldchess"]
+[UTCDate "2018.05.19"]
+[UTCTime "05:12:05"]
+
+{ Here is another aggressive move some black players make in an attempt to refute the London. }
+1. d4 Nf6 2. Bf4 d5 3. e3 c5 4. Nf3 Ne4?! { Their plan is usually to swap on d2, which can confuse the uninitiated London player. However, this shouldn't scare you! } 5. Nbd2! Nxd2?! (5... Nc6 6. Nxe4 dxe4 7. d5! { Ne5 is okay but d5 is the way to go to really punish black's play. } 7... exf3 8. dxc6 Qxd1+ 9. Rxd1 bxc6 10. gxf3 { Computer evaluates this position as +1 for black, and it's easy to see why. Double isolated c-pawns and zero development versus decent development and a lack of weak pawns - I'll take that. }) 6. Qxd2 e6 7. Be2 Nc6 8. O-O f6 (8... Bd6? { Typical move in the London but a mistake. } 9. dxc5! Bxc5 10. Qc3 Bf8 11. Rad1 $16) 9. c3 { Despite black's attempts, we have now reached a better-than-usual London position. } *
+
+

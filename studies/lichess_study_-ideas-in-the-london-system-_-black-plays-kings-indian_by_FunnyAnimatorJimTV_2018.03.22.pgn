@@ -1,0 +1,19 @@
+[Event "🍄 Ideas in the London System 🍄: - Black plays King's Indian"]
+[Date "2018.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "- Black plays King's Indian"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/BP0eJEKK"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.03.22"]
+[UTCTime "01:55:55"]
+
+{ In this chapter I'll explain what to do if black plays the King's Indian Defense: that is with Nf6, g6, Bg7, d6 and 0-0. } { [%cal Gg8f6,Gg7g6,Gf8g7,Ge8g8,Gd7d6] }
+1. d4 Nf6 2. Bf4 { Now at this point if black plays d5, we transpose back into our first chapters. But today we're going to talk about when black plays g6. } { [%cal Rd7d5] } 2... g6 { [%csl Gg6][%cal Gg7g6] } (2... d5 3. e3) 3. Nc3 { GOLDEN RULE #1: As soon as they go g6, you play Nc3. Why? Because we want to win in a very aggressive (not reckless) way. You'll see what I mean! :)
+Here if black is playing the King's Indian Defense, he'll play Bg7 quickly. But if your opponent plays the Grunfeld Defense or wants to stop our ambitions of playing e4, he may play d5. } { [%csl Gc3][%cal Gb1c3,Rg7g6,Bd7d5,Bf8g7] } 3... Bg7 { So if your opponent is a King's Indian Defense player and he just plays Bg7 quickly... } 4. e4 { *GOLDEN RULE* #2 And we play e4!! This is a bit similar to the 150 attack in the Pirc Defense, where we're going Qd2, 0-0-0 and going to attack black on the kingside.
+AND this opening has an added benefit over normal Pirc openings because black hasn't played d6 too early, so he can't go e5 too quickly. Our London Bishop keeps good control of the e5 square. } { [%csl Ge5,Ye4,Yd4][%cal Gd1d2,Ge1c1,Rd7d6,Re7e5,Gf4e5] } 4... d6 5. Qd2 { Planning to castle queenside and go Bh6, exchanging off this g7 bishop, a key piece } { [%csl Gg7][%cal Ge1c1,Gf4h6] } 5... O-O 6. O-O-O { Some of black's best moves are Nbd7 and Nc6, because both of these moves aim to at least create some central counterplay with e5. } { [%cal Bb8c6,Bb8d7,Be7e5] } 6... Nc6 { Here black is trying to play e5, so I think now we should stop this and go for CENTRAL CONTROL. } { [%csl Re5][%cal Re7e5] } (6... Nbd7 7. Nf3 (7. Bh6 e5 (7... Bxh6 8. Qxh6 e5 9. Nf3 exd4 10. Nxd4 Re8 11. f3 { [%cal Gg2g4,Gh2h4,Gh4h5] }) 8. Bxg7 Kxg7 9. dxe5 dxe5 10. f3) 7... c5 8. dxc5) (6... c6 7. Bh6) 7. Nf3 { *GOLDEN RULE* #3: DO your best to delay black from playing e5. } { [%csl Ge5][%cal Gf3e5] } 7... Bg4 { How do we stop e5 now? } { [%cal Rg4d1,Ge7e5] } 8. Qe3 { Qe3! The rook will be facing the queen on d8 } { [%cal Gd1d8,Ge7e5,Gd4e5,Gd6e5] } 8... Nd7 { Still trying to go e5. How do we stop e5 now?? } { [%csl Be5][%cal Rd7e5,Rc6e5,Rd6e5,Rg7e5,Be7e5] } 9. Bg5 { Pinning the e-pawn. Very clever! } { [%csl Re7][%cal Rg5d8] } 9... Qe8 { Trying really hard to enforce this move. And ONLY NOW that the queen has been misplaced to e8, do we go Bh6. } 10. Bh6 { Swapping off this key defensive bishop. } { [%csl Rg7,Gf8][%cal Rh6f8] } 10... Bxf3 11. gxf3 e5 12. Bxg7 Kxg7 13. dxe5 Qxe5 14. Nd5 { And white is in total control. The f and h pawns are ready to storm up the board. Plus we removed that important g7 bishop. Imagine if black had that dark squared bishop now! He'd be having brilliant influence across to b2, and his king would be well defended. } { [%csl Rg7][%cal Gf3f4,Gf4f5,Gh2h4,Gh4h5,Rg7b2] } *
+
+

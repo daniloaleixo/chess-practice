@@ -1,0 +1,32 @@
+[Event "🍄 Ideas in the London System 🍄: The Main Ideas"]
+[Date "2018.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "The Main Ideas"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/2saKs20w"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.03.22"]
+[UTCTime "02:04:47"]
+
+{ The London Opening can bring you great results and easily teach you very important ideas in chess. In this chapter I will show you the must-know ideas when playing the London Opening }
+1. d4 { In this chapter I'll explain the main ideas you will do in most London Opening games. } 1... d5 2. Bf4 { Our London Opening move.
+Plan Part #1: Start with d4 and Bf4. } 2... Nf6 3. e3 { Plan Part #2: Build a Pyramid! Play the moves e3 and c3 as soon as you can! } { [%csl Gc3,Ge3][%cal Gc2c3] } (3. Nf3 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 c4 7. Qc2 Bf5) 3... c5 { When c5 hits you never want to take on c5. The main reason is because when you take something you RELEASE TENSION and releasing tension is bad. You don't want to capture with your d4 pawn cause then you're just gonna destroy your own pyramid. Instead you let them take us. If they ever play cxd4, you almost always capture back with the e-pawn. } { [%csl Gd4][%cal Ge3d4,Gc5d4,Rd4c5] } 4. c3 { Your goal is to have e3 already played and to MEET C5 WITH C3. } { [%csl Ge3][%cal Gc7c5,Gc2c3] } 4... e6 { Plan Part #3: Develop your remaining minor pieces.
+The question is, where? The answer? Where they are closest to the CENTER!! The center is where your pieces are the most powerful, so we should get our pieces towards there. Thus, the best squares for our pieces are Nd2, Nf3 and Bd3. } { [%cal Bf1d3,Bb1d2,Bg1f3] } 5. Nd2 { I recommend developing the queen's knight before the king's knight, because there are some nasty things that can happen if you play Nf3 too early. You can avoid these annoyances by developing the queen knight first. } { [%csl Gd2][%cal Rg1f3,Gb1d2] } 5... Nc6 6. Ngf3 { Both knights are out to their best squares
+Here black can play either Bd6 or Be7. Be7 is more passive. I created a sideline so you can see my recommendation for what to do if they play that.
+The mainline runs Bd6. } { [%cal Bf8e7,Bf8d6] } 6... Bd6 { IDEA #4: The "Standoff" as GM Simon Williams likes to call it. There are two pistols aiming at each other. When black plays Bd6 aiming at your bishop, you've got to remember to NOT TAKE, but to drop this bishop back to g3.
+If you take, you help black to develop the queen and they can play e5 next. That is unacceptable. } { [%cal Rf4d6,Gf4g3] } (6... Be7) 7. Bg3 { Generally when you are given a choice whether to make an exchange or not, you should NOT do the exchange, but KEEP THE TENSION and let your opponent make the exchange. If black takes the bishop on g3, which weaker plays often do, you get a free open file and g-pawn battering rams. These are both excellent resources when you do your kingside attack. } { [%cal Bd6g3,Bh2g3,Yh1h8] } 7... O-O (7... Bxg3 8. hxg3 h6 9. Ne5 { Super important move. The idea is to stop black playing e5 and we want to increase our control of this square by playing f4. } { [%csl Be5][%cal Bf3e5,Rf2f4] } 9... Qd6 10. f4 { We upgraded our "Pyramid" into a "Stonewall" and we can do a very good kingside attack. } { [%csl Rb2,Rc3,Rd4,Re3,Rf4,Ge5][%cal Re3f4,Re3d4,Rb2d4,Gd4e5,Gf4e5] } 10... cxd4 11. exd4) 8. Bd3 { We completed idea 3, developing all our minor pieces } { [%csl Bd3,Bd2,Bf3] } 8... Re8 { Okay here is a typical example where black is going to play e6-e5, break up the center and free up his position and his light squared bishop.
+**GOLDEN RULE** #4: You should *NEVER* allow black to play e5. You have to block this square. } { [%csl Be5,Yc8][%cal Rf8e8,Re8e5,Be6e5,Yc8f5] } 9. Ne5 { **GOLDEN RULE** #5 Play Ne5. You have to play this at some point in the London System in order to get into the middlegame. With the move Ne5, we are:
+1. Preventing black from playing e5. *Super important, please take note of this*
+2. Occupying the center, the very best thing you can do
+3. Getting ready to play f4 next (Stonewall) and thereby setting up potential for a kingside attack. } { [%csl Ge5][%cal Gf2f4,Re6e5] } 9... Qc7 { The knight is attacked by too many pieces and not supported enough. } { [%csl Re5][%cal Rc7e5,Rc6e5] } 10. f4 { GOLDEN IDEA #6: Convert the "Pyramid" into what's known as a "Stonewall". (Pawns on c3, d4, e3 and f4)
+This is your main goal in the London System out of the opening. You want to have:
+1. Got all your pieces out and working, controlling both light and dark squares
+2. Stopped black playing e5 (played Ne5)
+3. Built your stonewall successfully } { [%csl Ge4,Rb2,Rc3,Rd4,Rf4,Re3][%cal Gd3e4,Gd2e4,Rb2d4,Re3d4,Re3f4] } 10... b6 { Now what do we do? We're in the middlegame. The plan is pretty straight forward: Put everything on the kingside and checkmate black. :)
+The attack will depend on your game; I can't really give you exact guidelines.
+But in Chapters 3 & 4 I included good examples on how to attack, and you can also check out my study containing my most brutal London Opening games: https://lichess.org/study/VSmBjmFj } { [%cal Bg3h4,Bd2f3,Be1g1,Yd1h5,Bd1f3,Yf3g5] } (10... cxd4 11. exd4 { If black captures on d4 you always recapture with e3 pawn } { [%cal Rc5d4,Re3d4] } 11... Bxe5 12. fxe5 { If black chops off your knight on e5 then you take with the f4 pawn. You keep your pawn on d4 and open the f-file. } { [%csl Gd4][%cal Rd6e5,Rf4e5,Gf1f7,Ge1g1] } 12... Nd7 { This is a fantastic attacking position for white. The white pieces are coming flying in, you have the two bishops, Qh5, Nf3-g5, and even castling bringing the rooks in on the f-file. } { [%csl Rc6,Rc7,Rd7,Rc8][%cal Bd3h7,Bd1h5,Bd2f3,Bf3g5,Be1g1] }) *
+
+

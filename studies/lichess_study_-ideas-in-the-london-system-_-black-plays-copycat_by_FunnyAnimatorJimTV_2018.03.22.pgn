@@ -1,0 +1,17 @@
+[Event "🍄 Ideas in the London System 🍄: - Black plays Copycat"]
+[Date "2018.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Accelerated London System"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "- Black plays Copycat"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/wCHfU2BA"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.03.22"]
+[UTCTime "15:32:45"]
+
+1. d4 { In this chapter I'll look at a variation you may see frequently } 1... d5 2. Bf4 Bf5 { It's where black plays this copycat move Bf5. There is a slight weakness with this move and that is that it leaves the b7 pawn unguarded.
+Here you have two ways to play. The safer way is to play e3 and Bd3. The more aggressive, riskier way is to play c4 and Qb3. } { [%csl Rf5,Rb7][%cal Ge2e3,Gf1d3,Rc2c4,Rd1b3] } 3. c4 { c4!! And this idea is to attack with a quick Qb3 similar to how black plays Qb6 against us. } { [%csl Gb7][%cal Rc4d5,Gd1b3,Gb3b7] } (3. e3 { This e3 move was played by Magnus Carlsen. } 3... e6 4. Bd3 Bxd3 5. Qxd3 { From here we get a very easy game. Depending on black's response we can play either c3 or c4. } { [%cal Gc2c4,Gc2c3] } 5... c6 6. Nf3 Nf6 7. O-O Bd6 8. Bxd6 Qxd6 9. c4 Nbd7 10. Nc3 O-O 11. Rad1) 3... e6 4. Nc3 { Develop a piece first } { [%csl Gc3][%cal Gb1c3] } 4... c6 5. Qb3 { And now you attack this pawn like black does to us. } { [%cal Rb3b7] } 5... Qb6 6. c5 { And now black MUST take the queen cause our bishop on f4 is preventing the black queen from going to c7 } { [%csl Rc7][%cal Rf4c7,Gb6c7] } 6... Qxb3 7. axb3 { And now you have the plan to go b3-b4-b5, maybe play e3 and even Nf3-h4 to exchange off black's best piece } { [%csl Gf5,Gb5,Re5][%cal Gg1f3,Ge2e3,Gf3h4,Ya1a7,Gb3b5,Re6e5] } *
+
+

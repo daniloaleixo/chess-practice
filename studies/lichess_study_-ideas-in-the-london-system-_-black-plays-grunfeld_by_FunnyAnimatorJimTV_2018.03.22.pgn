@@ -1,0 +1,25 @@
+[Event "🍄 Ideas in the London System 🍄: - Black plays Grunfeld"]
+[Date "2018.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "D01"]
+[Opening "Rapport-Jobava System"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "- Black plays Grunfeld"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/Z7RDkuTT"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.03.22"]
+[UTCTime "02:03:29"]
+
+{ Are you wondering how I draw my colorful arrows and circles?
+
+Green = Right Click
+Red = Right Click + Shift
+Blue = Right Click + Alt
+Yellow = Right Click + Shift + Alt } { [%csl Gb6,Gb5,Gb4,Gb3,Rd3,Rd4,Rd5,Rd6,Bf3,Bf4,Bf5,Bf6,Yh6,Yh5,Yh4,Yh3][%cal Ga3a6,Rc3c6,Be3e6,Yg3g6] }
+1. d4 { Alright... BACK TO THE SUBJECT.. :) In this chapter we'll look at when black plays Nf6+g6, and combines this with d5.
+The method I recommend involves e3. So this means we can transpose into this variation if black plays d5 and Nf6 early, and only after that do they play the move G6. } { [%csl Ge3][%cal Bg8f6,Bg7g6,Bd7d5,Ge2e3] } 1... Nf6 (1... d5 2. Bf4 Nf6 3. e3 g6 4. Nc3 { Remember as soon as they go g6 you go Nc3 } { [%csl Gg6,Gc3][%cal Gg7g6,Gb1c3] }) 2. Bf4 g6 3. Nc3 { Meet g6 with Nc3 } { [%csl Gc3,Gg6][%cal Gb1c3,Gg7g6] } 3... d5 { If your opponent is a Grunfeld Defense player, or they just want to stop you playing e4, then they will play this d5 move.
+So now we can't go e4, so what do we do? } { [%cal Re2e4] } 4. e3 { This is my recommendation. You play e3. } { [%csl Ge3][%cal Ge2e3] } 4... Bg7 5. h4 { And then you play h4. So this is what I think you should play when your opponent plays D5. So when you can't play e4, play e3 and h4.
+GOLDEN RULE #1: PLAY E3 AND H4 (Against Grunfeld) } { [%csl Rh4,Re3][%cal Rh2h4,Re2e3] } 5... O-O 6. h5 { Because now we're going all out with h5!! :) } 6... Nxh5 { A losing move!! } 7. Rxh5 { BOOM! We sacrifice the exchange with Rxh5!! } { [%csl Rh5][%cal Rh1h5] } 7... gxh5 8. Qxh5 { And Qxh5. We sacrificed the exchange, but honestly black is losing here!! We just develop our pieces and threaten mate. Bd3, Nf3-g5, 0-0-0 Rh1. Black won't be able to defend this. } { [%csl Bd3,Bg5,Bh1][%cal Bf1d3,Bg1f3,Bf3g5,Ba1h1] } 8... f5 9. Qh2 { Very subtle move, getting out of any Nf6 tempos on the queen, and simply threatens to take on c7! } { [%csl Gf6][%cal Rh2c7,Yb8d7,Yd7f6,Gf6h5] } 9... Na6 { Don't take the knight because it will open the file for black } { [%csl Ra6][%cal Ga8b8,Gb8b2,Yb7a6,Yf1a6] } (9... c6 10. Bc7 { Very important you go here before taking the knight } { [%cal Gf4c7,Gc7b8] } 10... Qd7 11. Bxb8 { Because we played Bc7 first, now black can't come to b6. } { [%cal Gd8b6] }) 10. O-O-O { [%cal Gf1d3,Gg1f3,Gf3g5,Gd1h1] } *
+
+

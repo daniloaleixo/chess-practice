@@ -1,0 +1,22 @@
+[Event "🍄 Ideas in the London System 🍄: - Black plays Benoni"]
+[Date "2018.03.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "🍄 Ideas in the London System 🍄"]
+[ChapterName "- Black plays Benoni"]
+[ChapterURL "https://lichess.org/study/KjivNw7F/vkhdz80G"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.03.22"]
+[UTCTime "02:03:41"]
+
+{ I think the Benoni systems by black are the most challenging for white by far. If you are playing black and your opponent plays the London, I highly recommend you play the Benoni against it. You can see I went into more detail for black in chapter 12, "Anti-London" }
+1. d4 Nf6 2. Bf4 c5 { Nf6 + c5 = Benoni
+Okay here you have two main options as white: e3/c3 (you are ready to accept a draw) or d5 (you play for a win).
+We want to play for a win as white, so let's play d5 } { [%cal Gd4d5,Re2e3,Rc2c3] } 3. d5 { The idea is that we want to play into the Benoni Pawn Structures
+Here black has two moves. Qb6 is more critical, but I cover d6 too } { [%csl Gd5][%cal Rd7d6,Rd8b6] } (3. e3 { As white, at this point you just have to hope and pray black doesn't play Qb6. If they play any other move then you just play c3 in a flash. (That way in case black ever plays Qb6 in the future, you can meet it with Qb3.) } { [%csl Gc3][%cal Bd8b6,Gc2c3,Gd1b3] } 3... Qb6 { OK......Black played Qb6. Now what?
+I really don't recommend playing b3 here. Instead we should try to sacrifice a pawn with Nc3. } 4. Nc3 Qxb2 5. Nb5 { Na6 is worse; Nd5 is better } { [%cal Rb8a6,Gf6d5] } 5... Na6 (5... Nd5 6. Rb1 (6. a3 a6 7. Rb1 Qa2 8. Ra1 Qb2 9. Rb1) 6... Qxa2 7. Ra1 Qb2 8. Rb1 Qa2 9. Ra1 Qb2) 6. a3 { Idea is to play Bc4 and Ra2 trapping the queen.
+Black is going to lose material here } { [%cal Gf1c4,Ga1a2] } 6... d6 (6... cxd4 7. Be5 e6 8. Bxd4 Bb4+ 9. axb4 Qxb4+ 10. c3 Qe7) (6... Nd5 7. Rb1 Qa2 8. Bg3 d6) 7. Bc4 Bf5 8. Ra2 Bxc2 9. Qxc2 Qxc2 10. Rxc2) 3... Qb6 { Here we don't want to play moves like Bc1, so the only other option is Nc3. } { [%cal Bb1c3,Rf4c1] } (3... d6 4. Nc3 e5 5. Bd2 (5. Bg5 Bf5 (5... h6 6. Bxf6 Qxf6 7. e4 Be7 8. Bd3 O-O 9. Nge2 a6 10. a4 Bg4))) (3... b5 4. c4 d6 5. cxb5 a6 6. bxa6 Bxa6) 4. Nc3 { Here as white we must be willing to sacrifice the pawn and play aggressively. } { [%csl Rb2] } 4... Qxb2 { Here black got 1 pawn, but he's going to have to waste 3-4 tempi in exchange for it. As white here, that's usually a decent deal. } { [%csl Rb2][%cal Bd8b6,Bb6b2,Bb2b6,Bb6d8] } 5. Bd2 { Here black has to play Qb6- if he doesn't he will lose material (Qb4 and a6 still do work but they are inferior) } { [%csl Rb6][%cal Rb2b6,Yb2b4,Ya7a6] } 5... Qb6 (5... a6 6. Rb1 Qa3 7. e4 d6) 6. e4 d6 7. f4 { As white we must play aggressively and actively, so we need to attack in the center } { [%csl Ge5][%cal Gf2f4,Ge4e5] } 7... g6 { I will show you how one line can go } 8. e5 dxe5 9. fxe5 Nfd7 10. Nf3 Bg7 11. Rb1 Qd8 12. e6 fxe6 13. Ng5 Nf6 14. Bb5+ Kf8 15. dxe6 Kg8 16. O-O { White has an edge here. All the pieces are out in the open and active } { [%csl Rh8,Ra8,Ge6,Gg5,Gf1,Gd2,Gd1,Gc3,Gb1,Gb5][%cal Yb1b7,Yf1f7,Yg5f7,Yg5e6,Yg5h7,Yd2h6,Yd2a5,Yb5a6,Yb5e8,Yc3d5,Yc3b5,Yc3e4,Yc3a4,Yd1h5,Yd1d8,Ye6f7,Ye6d7] } *
+
+

@@ -1,0 +1,17 @@
+[Event "🐸Tips for London System🐸: Against the Benoni Systems"]
+[Date "2018.04.15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "A45"]
+[Opening "Indian Defense: Accelerated London System"]
+[StudyName "🐸Tips for London System🐸"]
+[ChapterName "Against the Benoni Systems"]
+[ChapterURL "https://lichess.org/study/NboFy7hm/F7X0XLPt"]
+[Annotator "https://lichess.org/@/FunnyAnimatorJimTV"]
+[UTCDate "2018.04.15"]
+[UTCTime "03:24:41"]
+
+1. d4 Nf6 2. Bf4 c5 { This is the Benoni system for black.
+Most London System players don't think too much of this and just casually play e3 here. However, white can only get a draw or a loss there. You can see the sideline if you wish. } { [%csl Ge3][%cal Rc7c5,Ge2e3] } 3. d5 { As white we must play aggressively and sacrifice the b2 pawn. } { [%csl Rb2][%cal Rd8b6,Rb6b2] } (3. e3 Qb6 4. Nc3 Qxb2 5. Nb5 Nd5 6. Rb1 Qxa2 7. Ra1 Qb2 8. Rb1 Qa2 9. Ra1 Qb2 10. Rb1 Qa2 { Threefold Repetition = Draw }) 3... Qb6 4. Nc3 { We have no choice } { [%csl Gc3] } 4... Qxb2 5. Bd2 { Black has to move the queen back to b6. If he doesn't, he will lose material. } { [%cal Rb2b6] } 5... Qb6 { In some cases the queen may have to move back to d8 again. And if your opponent has to waste 3-4 tempo to get 1 pawn, that's usually a pretty good deal. } { [%csl Bd8][%cal Bb6d8] } 6. e4 { White's intention is to try to mow through the center with e5 and thrust the center. } { [%csl Ge4][%cal Gf2f4,Ge4e5] } 6... d6 { For example I will show you how a game could go } 7. f4 e5 (7... Bg4 8. Be2 Bxe2 9. Qxe2 Nbd7 10. e5 dxe5 11. fxe5 Ng8 12. e6 fxe6 13. dxe6 Ndf6 14. Rb1 Qc6 15. Nf3) 8. fxe5 dxe5 9. Nf3 Nbd7 10. Bc4 Be7 11. O-O O-O 12. Qe1 Qd8 13. a4 { White is better } *
+
+
