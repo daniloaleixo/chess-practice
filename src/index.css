@@ -14,7 +14,6 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100vh;
 }
 
@@ -121,4 +120,166 @@ body {
   min-height: 100vh;
   font-size: 1.1rem;
   color: #9ab;
+}
+
+/* Two-column layout */
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+  overflow-y: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #16213e;
+  padding: 16px 12px;
+  overflow-y: auto;
+  border-right: 1px solid #2a2a4a;
+}
+
+.sidebar-title {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #a0c4ff;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.sidebar-chapter {
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.sidebar-chapter:hover {
+  background: #1e2d50;
+}
+
+.sidebar-chapter--active {
+  background: #0f3460;
+}
+
+.sidebar-chapter-name {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.sidebar-chapter--active .sidebar-chapter-name {
+  color: #fff;
+}
+
+.sidebar-progress-bar {
+  height: 3px;
+  background: #1a3a5c;
+  border-radius: 2px;
+  margin-bottom: 3px;
+}
+
+.sidebar-progress-fill {
+  height: 100%;
+  background: #4ecca3;
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.sidebar-chapter-count {
+  font-size: 11px;
+  color: #555;
+}
+
+.sidebar-chapter--active .sidebar-chapter-count {
+  color: #4ecca3;
+}
+
+/* Practice board header */
+.practice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.practice-chapter-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a0c4ff;
+}
+
+.practice-line-counter {
+  font-size: 12px;
+  color: #4ecca3;
+}
+
+/* Board + eval bar side by side */
+.board-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.eval-bar {
+  width: 14px;
+  height: 480px;
+  background: #222;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.eval-bar-white {
+  background: #f0f0f0;
+  width: 100%;
+  transition: height 0.4s;
+}
+
+/* Eval score + hint button row */
+.below-board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 480px;
+  margin-top: 8px;
+}
+
+/* Hint */
+.hint-button {
+  background: #f9c74f;
+  color: #1a1a2e;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.hint-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.hint-button:not(:disabled):hover {
+  opacity: 0.85;
+}
+
+.hint-text {
+  font-size: 13px;
+  color: #f9c74f;
+  margin-top: 4px;
 }
