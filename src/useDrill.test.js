@@ -82,7 +82,9 @@ describe('useDrill', () => {
     const setScore = vi.fn()
     const { result } = renderHook(() => useDrill(makeChapter([line1]), getScore, setScore))
     act(() => { result.current.handleUserMove('d2', 'd4') })
-    expect(setScore).toHaveBeenCalledWith(line1.id, 2)
+    expect(setScore).toHaveBeenCalledWith(line1.id, expect.any(Function))
+    const [, updater] = setScore.mock.calls[0]
+    expect(updater(1)).toBe(2)
   })
 
   it('advances moveHistory to include White and Black moves after correct White move', () => {

@@ -33,6 +33,7 @@ export function useDrill(chapter, getScore, setScore) {
   const [currentCp, setCurrentCp] = useState(0)
   const [lineIndex, setLineIndex] = useState(() => stateRef.current.lineIndex)
   const hintUsedRef = useRef(false)
+  const startNewLineRef = useRef(null)
 
   const startNewLine = useCallback(() => {
     const next = initLine(chapter, getScore)
@@ -44,6 +45,7 @@ export function useDrill(chapter, getScore, setScore) {
     setLineIndex(next.lineIndex)
     setIsUserTurn(true)
   }, [chapter, getScore])
+  startNewLineRef.current = startNewLine  // always up to date
 
   const restartCurrentLine = useCallback(() => {
     const { lineIndex: idx } = stateRef.current
@@ -68,10 +70,10 @@ export function useDrill(chapter, getScore, setScore) {
       setMoveHistory([...chess.history()])
       setCurrentCp(cps[idx - 1] ?? 0)
       if (!hintUsedRef.current) {
-        setScore(stateRef.current.lineId, getScore(stateRef.current.lineId) + 1)
+        setScore(stateRef.current.lineId, s => s + 1)
       }
       setIsUserTurn(false)
-      setTimeout(() => startNewLine(), 2000)
+      setTimeout(() => startNewLineRef.current(), 2000)
     } else {
       setFen(chess.fen())
       setMoveHistory([...chess.history()])
@@ -79,7 +81,7 @@ export function useDrill(chapter, getScore, setScore) {
       stateRef.current.moveIndex = idx
       setIsUserTurn(true)
     }
-  }, [getScore, setScore, startNewLine])
+  }, [setScore])
 
   const handleUserMove = useCallback((from, to) => {
     const { chess, moves, cps, moveIndex } = stateRef.current

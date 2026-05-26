@@ -15,9 +15,11 @@ export function useProgress() {
 
   const getScore = useCallback((lineId) => progress[lineId] ?? 0, [progress])
 
-  const setScore = useCallback((lineId, score) => {
+  const setScore = useCallback((lineId, scoreOrUpdater) => {
     setProgress(prev => {
-      const next = { ...prev, [lineId]: score }
+      const current = prev[lineId] ?? 0
+      const newScore = typeof scoreOrUpdater === 'function' ? scoreOrUpdater(current) : scoreOrUpdater
+      const next = { ...prev, [lineId]: newScore }
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
       return next
     })
