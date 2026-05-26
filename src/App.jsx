@@ -7,7 +7,7 @@ export default function App() {
   const [chapters, setChapters] = useState(null)
   const [activeChapterId, setActiveChapterId] = useState(null)
   const [error, setError] = useState(null)
-  const { getMasteredCount } = useProgress()
+  const { getMasteredCount, getScore, setScore } = useProgress()
 
   useEffect(() => {
     fetch('/studies-with-eval.json')
@@ -38,7 +38,7 @@ export default function App() {
           onSelect={setActiveChapterId}
         />
         <main className="app-main">
-          <PracticeBoard key={activeChapterId} chapter={activeChapter} />
+          <PracticeBoard key={activeChapterId} chapter={activeChapter} getScore={getScore} setScore={setScore} />
         </main>
       </div>
     </div>

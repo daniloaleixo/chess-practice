@@ -1,12 +1,10 @@
 import { useState, useCallback, useRef } from 'react'
 import { Chessboard } from 'react-chessboard'
 import { useDrill } from './useDrill'
-import { useProgress } from './useProgress'
 
 const FEEDBACK_DURATION_MS = 1500
 
-export function PracticeBoard({ chapter }) {
-  const { getScore, setScore } = useProgress()
+export function PracticeBoard({ chapter, getScore, setScore }) {
   const {
     fen,
     moveHistory,
