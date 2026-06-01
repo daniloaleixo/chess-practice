@@ -132,17 +132,19 @@ describe('chunk state', () => {
     expect(result.current.getUnlockedDepth('benko', 4)).toBe(4)
   })
 
-  it('recordCorrectAtDepth resets correctAtDepth when chapter is fully unlocked', () => {
+  it('recordCorrectAtDepth does not cause spurious unlock if lineLength later increases', () => {
     const { result } = renderHook(() => useProgress())
-    // Unlock all the way to lineLength=5 by calling 3 times (unlockN=3) starting at startDepth=4
+    // Unlock to depth 5 (unlockN=3 calls with lineLength=5)
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
     act(() => { result.current.recordCorrectAtDepth('benko', 5) }) // unlocks to 5
-    // Now fully unlocked; further calls must not accumulate correctAtDepth
+    // Two more post-cap calls — without the fix, correctAtDepth accumulates to 2
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
-    // If correctAtDepth had accumulated to 2, a third call would unlock past lineLength=5
-    // Instead it should stay at 5
-    expect(result.current.getUnlockedDepth('benko', 5)).toBe(5)
+    // Now call with lineLength=6 — must NOT immediately unlock (needs 3 fresh correct answers)
+    let didUnlock
+    act(() => { didUnlock = result.current.recordCorrectAtDepth('benko', 6) })
+    expect(didUnlock).toBe(false)
+    expect(result.current.getUnlockedDepth('benko', 6)).toBe(5)
   })
 })
