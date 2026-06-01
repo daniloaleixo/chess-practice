@@ -36,7 +36,7 @@ export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect,
       <div className="chunk-settings">
         <button
           className="chunk-settings-toggle"
-          onClick={e => { e.stopPropagation(); setSettingsOpen(v => !v) }}
+          onClick={() => setSettingsOpen(v => !v)}
         >
           {settingsOpen ? '▲' : '▼'} Chunk settings
         </button>
