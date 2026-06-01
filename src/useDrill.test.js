@@ -128,3 +128,70 @@ describe('useDrill', () => {
     expect(result.current.isUserTurn).toBe(true)
   })
 })
+
+describe('chunk-aware drilling', () => {
+  const mockChapter = {
+    id: 'test-chapter',
+    lines: [{
+      id: 'test-chapter-0',
+      positions: [
+        { move: 'd4', cp: 30 },
+        { move: 'Nf6', cp: 20 },
+        { move: 'Bf4', cp: 35 },
+        { move: 'c5', cp: 25 },
+        { move: 'd5', cp: 40 },
+        { move: 'b5', cp: 30 },
+      ]
+    }]
+  }
+  const getScore = () => 0
+  const setScore = vi.fn()
+  const recordFn = vi.fn()
+
+  beforeEach(() => { setScore.mockClear(); recordFn.mockClear() })
+
+  it('truncates the line to unlockedDepth', () => {
+    const { result } = renderHook(() =>
+      useDrill(mockChapter, getScore, setScore, { unlockedDepth: 4, startFromChunk: false, recordCorrectAtDepth: recordFn })
+    )
+    // d4 → Nf6 auto → Bf4 → c5 auto → chunk complete (isUserTurn false)
+    act(() => { result.current.handleUserMove('d2', 'd4') })
+    act(() => { result.current.handleUserMove('c1', 'f4') })
+    expect(result.current.isUserTurn).toBe(false)
+  })
+
+  it('startFromChunk fast-forwards to the last White move in the chunk', () => {
+    const { result } = renderHook(() =>
+      useDrill(mockChapter, getScore, setScore, { unlockedDepth: 4, startFromChunk: true, recordCorrectAtDepth: recordFn })
+    )
+    // depth=4: moves=[d4,Nf6,Bf4,c5], lastWhiteIdx=2
+    // d4 and Nf6 are pre-applied; user starts at Bf4
+    expect(result.current.moveHistory.length).toBe(2)
+  })
+
+  it('recordCorrectAtDepth is called with chapterId and full lineLength on chunk completion', () => {
+    const { result } = renderHook(() =>
+      useDrill(mockChapter, getScore, setScore, { unlockedDepth: 4, startFromChunk: false, recordCorrectAtDepth: recordFn })
+    )
+    act(() => { result.current.handleUserMove('d2', 'd4') })
+    act(() => { result.current.handleUserMove('c1', 'f4') })
+    expect(recordFn).toHaveBeenCalledWith('test-chapter', 6)
+  })
+
+  it('newlyUnlockedDepth is null initially', () => {
+    const { result } = renderHook(() =>
+      useDrill(mockChapter, getScore, setScore, { unlockedDepth: 4, startFromChunk: false, recordCorrectAtDepth: recordFn })
+    )
+    expect(result.current.newlyUnlockedDepth).toBeNull()
+  })
+
+  it('newlyUnlockedDepth is set to new depth when recordCorrectAtDepth returns true', () => {
+    recordFn.mockReturnValue(true)
+    const { result } = renderHook(() =>
+      useDrill(mockChapter, getScore, setScore, { unlockedDepth: 4, startFromChunk: false, recordCorrectAtDepth: recordFn })
+    )
+    act(() => { result.current.handleUserMove('d2', 'd4') })
+    act(() => { result.current.handleUserMove('c1', 'f4') })
+    expect(result.current.newlyUnlockedDepth).toBe(5)
+  })
+})

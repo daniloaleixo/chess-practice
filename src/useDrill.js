@@ -12,48 +12,70 @@ function pickWeightedRandom(lines, getScore) {
   return lines.length - 1
 }
 
-function initLine(chapter, getScore, lineIndex = null) {
+function initLine(chapter, getScore, lineIndex = null, effectiveDepth = Infinity, startFromChunk = false) {
   const idx = lineIndex ?? pickWeightedRandom(chapter.lines, getScore)
   const line = chapter.lines[idx]
-  const moves = line.positions.map(p => p.move.replace('0-0-0', 'O-O-O').replace('0-0', 'O-O'))
-  const cps = line.positions.map(p => p.cp ?? 0)
+  const allMoves = line.positions.map(p => p.move.replace('0-0-0', 'O-O-O').replace('0-0', 'O-O'))
+  const allCps = line.positions.map(p => p.cp ?? 0)
+  const cap = Math.min(effectiveDepth, allMoves.length)
+  const moves = allMoves.slice(0, cap)
+  const cps = allCps.slice(0, cap)
+
   const chess = new Chess()
-  return { chess, moves, cps, moveIndex: 0, lineId: line.id, lineIndex: idx }
+  let moveIndex = 0
+
+  if (startFromChunk && cap > 0) {
+    const lastWhiteIdx = [...Array(cap).keys()].filter(i => i % 2 === 0).at(-1) ?? 0
+    for (let i = 0; i < lastWhiteIdx; i++) chess.move(moves[i])
+    moveIndex = lastWhiteIdx
+  }
+
+  return { chess, moves, cps, moveIndex, lineId: line.id, lineIndex: idx, lineLength: line.positions.length }
 }
 
-export function useDrill(chapter, getScore, setScore) {
+export function useDrill(chapter, getScore, setScore, { unlockedDepth = Infinity, startFromChunk = false, recordCorrectAtDepth = null } = {}) {
   const stateRef = useRef(null)
   if (stateRef.current === null) {
-    stateRef.current = initLine(chapter, getScore)
+    stateRef.current = initLine(chapter, getScore, null, unlockedDepth, startFromChunk)
   }
 
   const [fen, setFen] = useState(() => stateRef.current.chess.fen())
-  const [moveHistory, setMoveHistory] = useState([])
+  const [moveHistory, setMoveHistory] = useState(() => [...stateRef.current.chess.history()])
   const [isUserTurn, setIsUserTurn] = useState(true)
   const [currentCp, setCurrentCp] = useState(0)
   const [lineIndex, setLineIndex] = useState(() => stateRef.current.lineIndex)
+  const [newlyUnlockedDepth, setNewlyUnlockedDepth] = useState(null)
+
   const hintUsedRef = useRef(false)
   const startNewLineRef = useRef(null)
+  const recordCorrectAtDepthRef = useRef(recordCorrectAtDepth)
+  recordCorrectAtDepthRef.current = recordCorrectAtDepth
+  const unlockedDepthRef = useRef(unlockedDepth)
+  unlockedDepthRef.current = unlockedDepth
+  const startFromChunkRef = useRef(startFromChunk)
+  startFromChunkRef.current = startFromChunk
 
   const startNewLine = useCallback(() => {
-    const next = initLine(chapter, getScore)
+    const next = initLine(chapter, getScore, null, unlockedDepthRef.current, startFromChunkRef.current)
     stateRef.current = next
     hintUsedRef.current = false
+    setNewlyUnlockedDepth(null)
     setFen(next.chess.fen())
-    setMoveHistory([])
+    setMoveHistory([...next.chess.history()])
     setCurrentCp(0)
     setLineIndex(next.lineIndex)
     setIsUserTurn(true)
   }, [chapter, getScore])
-  startNewLineRef.current = startNewLine  // always up to date
+  startNewLineRef.current = startNewLine
 
   const restartCurrentLine = useCallback(() => {
     const { lineIndex: idx } = stateRef.current
-    const next = initLine(chapter, getScore, idx)
+    const next = initLine(chapter, getScore, idx, unlockedDepthRef.current, startFromChunkRef.current)
     stateRef.current = next
     hintUsedRef.current = false
+    setNewlyUnlockedDepth(null)
     setFen(next.chess.fen())
-    setMoveHistory([])
+    setMoveHistory([...next.chess.history()])
     setCurrentCp(0)
     setIsUserTurn(true)
   }, [chapter, getScore])
@@ -71,6 +93,8 @@ export function useDrill(chapter, getScore, setScore) {
       setCurrentCp(cps[idx - 1] ?? 0)
       if (!hintUsedRef.current) {
         setScore(stateRef.current.lineId, s => s + 1)
+        const didUnlock = recordCorrectAtDepthRef.current?.(chapter.id, stateRef.current.lineLength) ?? false
+        if (didUnlock) setNewlyUnlockedDepth(unlockedDepthRef.current + 1)
       }
       setIsUserTurn(false)
       setTimeout(() => startNewLineRef.current(), 2000)
@@ -81,7 +105,7 @@ export function useDrill(chapter, getScore, setScore) {
       stateRef.current.moveIndex = idx
       setIsUserTurn(true)
     }
-  }, [setScore])
+  }, [setScore, chapter.id])
 
   const handleUserMove = useCallback((from, to) => {
     const { chess, moves, cps, moveIndex } = stateRef.current
@@ -121,5 +145,6 @@ export function useDrill(chapter, getScore, setScore) {
     handleUserMove,
     hint,
     restartCurrentLine,
+    newlyUnlockedDepth,
   }
 }
