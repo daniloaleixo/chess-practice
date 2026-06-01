@@ -144,7 +144,7 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
         <div className="hint-text">Hint: play <strong>{hintSan}</strong></div>
       )}
 
-      {!isUserTurn && (
+      {!isUserTurn && newlyUnlockedDepth === null && (
         <div className="feedback feedback--correct">Line complete! ✓</div>
       )}
 

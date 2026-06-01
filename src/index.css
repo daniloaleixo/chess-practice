@@ -292,6 +292,12 @@ body {
   color: #ccc;
   cursor: pointer;
   font-size: 0.75rem;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.chunk-toggle:hover {
+  border-color: #888;
+  color: #fff;
 }
 
 .chunk-toggle--active {
