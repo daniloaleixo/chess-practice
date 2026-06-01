@@ -49,7 +49,11 @@ export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect,
                 min="1"
                 className="chunk-settings-input"
                 value={chunkSettings.startDepth}
-                onChange={e => setChunkSettings({ ...chunkSettings, startDepth: Math.max(1, Number(e.target.value)) })}
+                onChange={e => {
+                  const n = parseInt(e.target.value, 10)
+                  if (!Number.isFinite(n) || n < 1) return
+                  setChunkSettings({ ...chunkSettings, startDepth: n })
+                }}
               />
             </label>
             <label className="chunk-settings-label">
@@ -59,7 +63,11 @@ export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect,
                 min="1"
                 className="chunk-settings-input"
                 value={chunkSettings.unlockN}
-                onChange={e => setChunkSettings({ ...chunkSettings, unlockN: Math.max(1, Number(e.target.value)) })}
+                onChange={e => {
+                  const n = parseInt(e.target.value, 10)
+                  if (!Number.isFinite(n) || n < 1) return
+                  setChunkSettings({ ...chunkSettings, unlockN: n })
+                }}
               />
             </label>
           </div>

@@ -25,11 +25,14 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
   const [hintSan, setHintSan] = useState(null)
   const lockedRef = useRef(false)
   const feedbackTimerRef = useRef(null)
-  const isFirstRender = useRef(true)
+  const restartCurrentLineRef = useRef(restartCurrentLine)
+  restartCurrentLineRef.current = restartCurrentLine
+  const prevStartFromChunk = useRef(startFromChunk)
   useEffect(() => {
-    if (isFirstRender.current) { isFirstRender.current = false; return }
-    restartCurrentLine()
-  }, [startFromChunk, restartCurrentLine])
+    if (prevStartFromChunk.current === startFromChunk) return
+    prevStartFromChunk.current = startFromChunk
+    restartCurrentLineRef.current()
+  }, [startFromChunk])
 
   const tryMove = useCallback((sourceSquare, targetSquare) => {
     if (!isUserTurn || lockedRef.current) return false
