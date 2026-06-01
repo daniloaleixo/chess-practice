@@ -96,6 +96,12 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
       <div className="practice-header">
         <span className="practice-chapter-name">{chapter.name}</span>
         <span className="practice-line-counter">Line {currentLineIndex + 1} of {totalLines}</span>
+        <button
+          className={`chunk-toggle${startFromChunk ? ' chunk-toggle--active' : ''}`}
+          onClick={() => setStartFromChunk(v => !v)}
+        >
+          {startFromChunk ? 'From chunk' : 'Full line'}
+        </button>
       </div>
 
       <div className="move-notation">
@@ -146,6 +152,10 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
         <div className={`feedback ${feedback.correct ? 'feedback--correct' : 'feedback--wrong'}`}>
           {feedback.message}
         </div>
+      )}
+
+      {newlyUnlockedDepth !== null && (
+        <div className="feedback feedback--correct">Move {newlyUnlockedDepth} unlocked!</div>
       )}
     </div>
   )
