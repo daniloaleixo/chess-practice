@@ -7,7 +7,10 @@ export default function App() {
   const [chapters, setChapters] = useState(null)
   const [activeChapterId, setActiveChapterId] = useState(null)
   const [error, setError] = useState(null)
-  const { getMasteredCount, getScore, setScore } = useProgress()
+  const {
+    getMasteredCount, getScore, setScore,
+    chunkSettings, getUnlockedDepth, recordCorrectAtDepth, setChunkSettings,
+  } = useProgress()
 
   useEffect(() => {
     fetch('/studies-with-eval.json')
@@ -24,6 +27,8 @@ export default function App() {
   if (chapters.length === 0) return <div className="status-message">No chapters found. Add .pgn files to studies/ and run node scripts/build-studies.js.</div>
 
   const activeChapter = chapters.find(c => c.id === activeChapterId) ?? chapters[0]
+  const maxLineLength = activeChapter.lines.reduce((max, l) => Math.max(max, l.positions.length), 0)
+  const unlockedDepth = getUnlockedDepth(activeChapter.id, maxLineLength)
 
   return (
     <div className="app">
@@ -36,9 +41,19 @@ export default function App() {
           getMasteredCount={getMasteredCount}
           activeChapterId={activeChapterId}
           onSelect={setActiveChapterId}
+          getUnlockedDepth={getUnlockedDepth}
+          chunkSettings={chunkSettings}
+          setChunkSettings={setChunkSettings}
         />
         <main className="app-main">
-          <PracticeBoard key={activeChapterId} chapter={activeChapter} getScore={getScore} setScore={setScore} />
+          <PracticeBoard
+            key={activeChapterId}
+            chapter={activeChapter}
+            getScore={getScore}
+            setScore={setScore}
+            unlockedDepth={unlockedDepth}
+            recordCorrectAtDepth={recordCorrectAtDepth}
+          />
         </main>
       </div>
     </div>

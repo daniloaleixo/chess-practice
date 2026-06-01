@@ -1,10 +1,11 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { Chessboard } from 'react-chessboard'
 import { useDrill } from './useDrill'
 
 const FEEDBACK_DURATION_MS = 1500
 
-export function PracticeBoard({ chapter, getScore, setScore }) {
+export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, recordCorrectAtDepth }) {
+  const [startFromChunk, setStartFromChunk] = useState(false)
   const {
     fen,
     moveHistory,
@@ -16,13 +17,19 @@ export function PracticeBoard({ chapter, getScore, setScore }) {
     handleUserMove,
     hint,
     restartCurrentLine,
-  } = useDrill(chapter, getScore, setScore)
+    newlyUnlockedDepth,
+  } = useDrill(chapter, getScore, setScore, { unlockedDepth, startFromChunk, recordCorrectAtDepth })
 
   const [feedback, setFeedback] = useState(null)
   const [selectedSquare, setSelectedSquare] = useState(null)
   const [hintSan, setHintSan] = useState(null)
   const lockedRef = useRef(false)
   const feedbackTimerRef = useRef(null)
+  const isFirstRender = useRef(true)
+  useEffect(() => {
+    if (isFirstRender.current) { isFirstRender.current = false; return }
+    restartCurrentLine()
+  }, [startFromChunk, restartCurrentLine])
 
   const tryMove = useCallback((sourceSquare, targetSquare) => {
     if (!isUserTurn || lockedRef.current) return false
