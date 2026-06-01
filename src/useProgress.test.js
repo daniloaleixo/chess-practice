@@ -68,3 +68,67 @@ describe('useProgress', () => {
     expect(result.current.getScore('london-vs-kid-0')).toBe(2)
   })
 })
+
+describe('chunk state', () => {
+  it('chunkSettings defaults to startDepth 4 and unlockN 3', () => {
+    const { result } = renderHook(() => useProgress())
+    expect(result.current.chunkSettings).toEqual({ startDepth: 4, unlockN: 3 })
+  })
+
+  it('setChunkSettings updates state and persists to localStorage', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.setChunkSettings({ startDepth: 6, unlockN: 5 }))
+    expect(result.current.chunkSettings).toEqual({ startDepth: 6, unlockN: 5 })
+    expect(JSON.parse(localStorage.getItem('chess-practice:chunk-settings'))).toEqual({ startDepth: 6, unlockN: 5 })
+  })
+
+  it('getUnlockedDepth returns startDepth for a new chapter', () => {
+    const { result } = renderHook(() => useProgress())
+    expect(result.current.getUnlockedDepth('benko', 11)).toBe(4)
+  })
+
+  it('getUnlockedDepth caps at lineLength', () => {
+    const { result } = renderHook(() => useProgress())
+    expect(result.current.getUnlockedDepth('benko', 3)).toBe(3)
+  })
+
+  it('recordCorrectAtDepth increments correctAtDepth without unlocking before N', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.recordCorrectAtDepth('benko', 11))
+    act(() => result.current.recordCorrectAtDepth('benko', 11))
+    expect(result.current.getUnlockedDepth('benko', 11)).toBe(4)
+  })
+
+  it('recordCorrectAtDepth unlocks next depth after unlockN correct answers', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.recordCorrectAtDepth('benko', 11))
+    act(() => result.current.recordCorrectAtDepth('benko', 11))
+    act(() => result.current.recordCorrectAtDepth('benko', 11))
+    expect(result.current.getUnlockedDepth('benko', 11)).toBe(5)
+  })
+
+  it('recordCorrectAtDepth returns true when an unlock happens', () => {
+    const { result } = renderHook(() => useProgress())
+    let unlocked
+    act(() => { result.current.recordCorrectAtDepth('benko', 11) })
+    act(() => { result.current.recordCorrectAtDepth('benko', 11) })
+    act(() => { unlocked = result.current.recordCorrectAtDepth('benko', 11) })
+    expect(unlocked).toBe(true)
+  })
+
+  it('recordCorrectAtDepth returns false when not yet unlocking', () => {
+    const { result } = renderHook(() => useProgress())
+    let unlocked
+    act(() => { unlocked = result.current.recordCorrectAtDepth('benko', 11) })
+    expect(unlocked).toBe(false)
+  })
+
+  it('recordCorrectAtDepth does not unlock past lineLength', () => {
+    const { result } = renderHook(() => useProgress())
+    // lineLength=4 equals startDepth=4 — already at cap, should never unlock
+    act(() => { result.current.recordCorrectAtDepth('benko', 4) })
+    act(() => { result.current.recordCorrectAtDepth('benko', 4) })
+    act(() => { result.current.recordCorrectAtDepth('benko', 4) })
+    expect(result.current.getUnlockedDepth('benko', 4)).toBe(4)
+  })
+})
