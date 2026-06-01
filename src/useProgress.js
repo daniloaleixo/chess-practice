@@ -75,7 +75,8 @@ export function useProgress() {
       next = { ...prev, [chapterId]: { unlockedDepth: current.unlockedDepth + 1, correctAtDepth: 0 } }
     } else {
       didUnlock = false
-      next = { ...prev, [chapterId]: { ...current, correctAtDepth: newCorrect } }
+      const alreadyCapped = current.unlockedDepth >= lineLength
+      next = { ...prev, [chapterId]: { ...current, correctAtDepth: alreadyCapped ? 0 : newCorrect } }
     }
 
     chunkProgressRef.current = next
