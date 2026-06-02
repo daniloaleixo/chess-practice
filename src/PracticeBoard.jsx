@@ -158,7 +158,11 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
       )}
 
       {newlyUnlockedDepth !== null && (
-        <div className="feedback feedback--correct">Move {newlyUnlockedDepth} unlocked!</div>
+        <div className="feedback feedback--correct">
+          {newlyUnlockedDepth.from === newlyUnlockedDepth.to
+            ? `Move ${newlyUnlockedDepth.to} unlocked!`
+            : `Moves ${newlyUnlockedDepth.from} & ${newlyUnlockedDepth.to} unlocked!`}
+        </div>
       )}
     </div>
   )
