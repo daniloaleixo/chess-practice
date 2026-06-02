@@ -135,9 +135,11 @@ export function useDrill(chapter, getScore, setScore, { unlockedDepth = Infinity
     return stateRef.current.moves[stateRef.current.moveIndex] ?? null
   }, [])
 
-  const { moves, moveIndex } = stateRef.current
+  const { moves, moveIndex, allAnnotations } = stateRef.current
   const expectedMove = moves[moveIndex] ?? ''
-  const currentAnnotation = stateRef.current.allAnnotations[stateRef.current.moveIndex] ?? null
+  const currentAnnotation = moveIndex < moves.length
+    ? allAnnotations[moveIndex] ?? null
+    : null
 
   return {
     fen,

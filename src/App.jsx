@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { PracticeBoard } from './PracticeBoard'
 import { Sidebar } from './Sidebar'
 import { useProgress } from './useProgress'
@@ -12,6 +12,10 @@ export default function App() {
     getMasteredCount, getScore, setScore,
     chunkSettings, getUnlockedDepth, recordCorrectAtDepth, setChunkSettings,
   } = useProgress()
+
+  const onAnnotationChange = useCallback((annotation) => {
+    setCurrentAnnotation(annotation)
+  }, [])
 
   useEffect(() => {
     setCurrentAnnotation(null)
@@ -60,7 +64,7 @@ export default function App() {
             setScore={setScore}
             unlockedDepth={unlockedDepth}
             recordCorrectAtDepth={recordCorrectAtDepth}
-            onAnnotationChange={setCurrentAnnotation}
+            onAnnotationChange={onAnnotationChange}
             showAnnotations={showAnnotations}
           />
         </main>

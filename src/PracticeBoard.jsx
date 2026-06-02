@@ -4,6 +4,13 @@ import { useDrill } from './useDrill'
 
 const FEEDBACK_DURATION_MS = 1500
 
+const ANNOTATION_COLOR_MAP = {
+  red: 'rgba(255, 0, 0, 0.4)',
+  green: 'rgba(0, 128, 0, 0.4)',
+  yellow: 'rgba(255, 255, 0, 0.4)',
+  blue: 'rgba(0, 0, 255, 0.4)',
+}
+
 export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, recordCorrectAtDepth, onAnnotationChange, showAnnotations }) {
   const [startFromChunk, setStartFromChunk] = useState(false)
   const {
@@ -84,13 +91,6 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
     const san = hint()
     if (san) setHintSan(san)
   }, [hint])
-
-  const ANNOTATION_COLOR_MAP = {
-    red: 'rgba(255, 0, 0, 0.4)',
-    green: 'rgba(0, 128, 0, 0.4)',
-    yellow: 'rgba(255, 255, 0, 0.4)',
-    blue: 'rgba(0, 0, 255, 0.4)',
-  }
 
   const annotationSquareStyles = showAnnotations && currentAnnotation?.squares?.length
     ? Object.fromEntries(
