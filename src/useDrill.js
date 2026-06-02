@@ -17,6 +17,7 @@ function initLine(chapter, getScore, lineIndex = null, effectiveDepth = Infinity
   const line = chapter.lines[idx]
   const allMoves = line.positions.map(p => p.move.replace('0-0-0', 'O-O-O').replace('0-0', 'O-O'))
   const allCps = line.positions.map(p => p.cp ?? 0)
+  const allAnnotations = line.positions.map(p => p.annotation ?? null)
   const cap = Math.min(effectiveDepth, allMoves.length)
   const moves = allMoves.slice(0, cap)
   const cps = allCps.slice(0, cap)
@@ -30,7 +31,7 @@ function initLine(chapter, getScore, lineIndex = null, effectiveDepth = Infinity
     moveIndex = lastWhiteIdx
   }
 
-  return { chess, moves, cps, moveIndex, lineId: line.id, lineIndex: idx, lineLength: line.positions.length }
+  return { chess, moves, cps, allAnnotations, moveIndex, lineId: line.id, lineIndex: idx, lineLength: line.positions.length }
 }
 
 export function useDrill(chapter, getScore, setScore, { unlockedDepth = Infinity, startFromChunk = false, recordCorrectAtDepth = null } = {}) {
@@ -136,6 +137,7 @@ export function useDrill(chapter, getScore, setScore, { unlockedDepth = Infinity
 
   const { moves, moveIndex } = stateRef.current
   const expectedMove = moves[moveIndex] ?? ''
+  const currentAnnotation = stateRef.current.allAnnotations[stateRef.current.moveIndex] ?? null
 
   return {
     fen,
@@ -149,5 +151,6 @@ export function useDrill(chapter, getScore, setScore, { unlockedDepth = Infinity
     hint,
     restartCurrentLine,
     newlyUnlockedDepth,
+    currentAnnotation,
   }
 }

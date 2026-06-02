@@ -29,6 +29,16 @@ function makeChapter(lines) {
   return { id: 'london-vs-dutch', name: 'London vs Dutch', lines }
 }
 
+const annotatedLine = {
+  id: 'annotated-0',
+  pgn: '1. d4 d5',
+  positions: [
+    { fen: 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1', move: 'd4', cp: 15, annotation: { text: 'Start with d4', arrows: [], squares: [] } },
+    { fen: 'rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2', move: 'd5', cp: 5, annotation: null },
+  ],
+}
+const annotatedChapter = { id: 'annotated', name: 'Annotated', lines: [annotatedLine] }
+
 describe('useDrill', () => {
   beforeEach(() => vi.useFakeTimers())
   afterEach(() => vi.useRealTimers())
@@ -205,5 +215,42 @@ describe('chunk-aware drilling', () => {
     expect(result.current.newlyUnlockedDepth).toEqual({ from: 5, to: 6 })
     act(() => { result.current.restartCurrentLine() })
     expect(result.current.newlyUnlockedDepth).toBeNull()
+  })
+})
+
+describe('currentAnnotation', () => {
+  it('returns annotation for the next move to play', () => {
+    const { result } = renderHook(() =>
+      useDrill(annotatedChapter, () => 0, vi.fn())
+    )
+    // At move index 0, user must play d4. annotation is on positions[0]
+    expect(result.current.currentAnnotation).toMatchObject({ text: 'Start with d4' })
+  })
+
+  it('returns null after playing the annotated move (moveIndex advances to an un-annotated slot)', () => {
+    const { result } = renderHook(() =>
+      useDrill(annotatedChapter, () => 0, vi.fn())
+    )
+    act(() => {
+      result.current.handleUserMove('d2', 'd4')
+    })
+    // After d4, black auto-plays d5 (line completes). moveIndex = 1, allAnnotations[1] = null
+    expect(result.current.currentAnnotation).toBeNull()
+  })
+
+  it('returns null when chapter has no annotation data', () => {
+    const noAnnotationLine = {
+      id: 'plain-0',
+      pgn: '1. d4 d5',
+      positions: [
+        { fen: 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1', move: 'd4', cp: 15, annotation: null },
+        { fen: 'rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2', move: 'd5', cp: 5, annotation: null },
+      ],
+    }
+    const plainChapter = { id: 'plain', name: 'Plain', lines: [noAnnotationLine] }
+    const { result } = renderHook(() =>
+      useDrill(plainChapter, () => 0, vi.fn())
+    )
+    expect(result.current.currentAnnotation).toBeNull()
   })
 })
