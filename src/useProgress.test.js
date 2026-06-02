@@ -72,7 +72,7 @@ describe('useProgress', () => {
 describe('chunk state', () => {
   it('chunkSettings defaults to startDepth 4 and unlockN 3', () => {
     const { result } = renderHook(() => useProgress())
-    expect(result.current.chunkSettings).toEqual({ startDepth: 4, unlockN: 3 })
+    expect(result.current.chunkSettings).toEqual({ startDepth: 4, unlockN: 3, showAnnotations: true })
   })
 
   it('setChunkSettings updates state and persists to localStorage', () => {
@@ -146,5 +146,32 @@ describe('chunk state', () => {
     act(() => { didUnlock = result.current.recordCorrectAtDepth('benko', 6) })
     expect(didUnlock).toBe(false)
     expect(result.current.getUnlockedDepth('benko', 6)).toBe(6)
+  })
+})
+
+describe('showAnnotations setting', () => {
+  beforeEach(() => {
+    localStorage.clear()
+  })
+
+  it('defaults showAnnotations to true', () => {
+    const { result } = renderHook(() => useProgress())
+    expect(result.current.chunkSettings.showAnnotations).toBe(true)
+  })
+
+  it('persists showAnnotations to localStorage via setChunkSettings', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => {
+      result.current.setChunkSettings({ ...result.current.chunkSettings, showAnnotations: false })
+    })
+    expect(result.current.chunkSettings.showAnnotations).toBe(false)
+    const stored = JSON.parse(localStorage.getItem('chess-practice:chunk-settings'))
+    expect(stored.showAnnotations).toBe(false)
+  })
+
+  it('loads showAnnotations from localStorage', () => {
+    localStorage.setItem('chess-practice:chunk-settings', JSON.stringify({ startDepth: 4, unlockN: 3, showAnnotations: false }))
+    const { result } = renderHook(() => useProgress())
+    expect(result.current.chunkSettings.showAnnotations).toBe(false)
   })
 })

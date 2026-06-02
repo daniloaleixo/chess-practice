@@ -4,7 +4,7 @@ const STORAGE_KEY = 'chess-practice:progress'
 const CHUNK_SETTINGS_KEY = 'chess-practice:chunk-settings'
 const CHUNK_PROGRESS_KEY = 'chess-practice:chunk-progress'
 
-const DEFAULT_CHUNK_SETTINGS = { startDepth: 4, unlockN: 3 }
+const DEFAULT_CHUNK_SETTINGS = { startDepth: 4, unlockN: 3, showAnnotations: true }
 
 function loadProgress() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '{}') } catch { return {} }
@@ -85,8 +85,7 @@ export function useProgress() {
     return didUnlock
   }, [])
 
-  const setChunkSettings = useCallback(({ startDepth, unlockN }) => {
-    const next = { startDepth, unlockN }
+  const setChunkSettings = useCallback((next) => {
     setChunkSettingsState(next)
     localStorage.setItem(CHUNK_SETTINGS_KEY, JSON.stringify(next))
   }, [])
