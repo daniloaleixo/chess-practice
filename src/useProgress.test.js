@@ -104,7 +104,7 @@ describe('chunk state', () => {
     act(() => result.current.recordCorrectAtDepth('benko', 11))
     act(() => result.current.recordCorrectAtDepth('benko', 11))
     act(() => result.current.recordCorrectAtDepth('benko', 11))
-    expect(result.current.getUnlockedDepth('benko', 11)).toBe(5)
+    expect(result.current.getUnlockedDepth('benko', 11)).toBe(6)
   })
 
   it('recordCorrectAtDepth returns true when an unlock happens', () => {
@@ -134,10 +134,10 @@ describe('chunk state', () => {
 
   it('recordCorrectAtDepth does not cause spurious unlock if lineLength later increases', () => {
     const { result } = renderHook(() => useProgress())
-    // Unlock to depth 5 (unlockN=3 calls with lineLength=5)
+    // Unlock to depth 6 (unlockN=3 calls with lineLength=5)
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
-    act(() => { result.current.recordCorrectAtDepth('benko', 5) }) // unlocks to 5
+    act(() => { result.current.recordCorrectAtDepth('benko', 5) }) // unlocks stored depth to 6 (effective=5 while lineLength=5)
     // Two more post-cap calls — without the fix, correctAtDepth accumulates to 2
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
     act(() => { result.current.recordCorrectAtDepth('benko', 5) })
@@ -145,6 +145,6 @@ describe('chunk state', () => {
     let didUnlock
     act(() => { didUnlock = result.current.recordCorrectAtDepth('benko', 6) })
     expect(didUnlock).toBe(false)
-    expect(result.current.getUnlockedDepth('benko', 6)).toBe(5)
+    expect(result.current.getUnlockedDepth('benko', 6)).toBe(6)
   })
 })

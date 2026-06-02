@@ -72,7 +72,7 @@ export function useProgress() {
     let next, didUnlock
     if (newCorrect >= unlockN && current.unlockedDepth < lineLength) {
       didUnlock = true
-      next = { ...prev, [chapterId]: { unlockedDepth: current.unlockedDepth + 1, correctAtDepth: 0 } }
+      next = { ...prev, [chapterId]: { unlockedDepth: current.unlockedDepth + 2, correctAtDepth: 0 } }
     } else {
       didUnlock = false
       const alreadyCapped = current.unlockedDepth >= lineLength
