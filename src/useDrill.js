@@ -94,7 +94,10 @@ export function useDrill(chapter, getScore, setScore, { unlockedDepth = Infinity
       if (!hintUsedRef.current) {
         setScore(stateRef.current.lineId, s => s + 1)
         const didUnlock = recordCorrectAtDepthRef.current?.(chapter.id, stateRef.current.lineLength) ?? false
-        if (didUnlock) setNewlyUnlockedDepth(unlockedDepthRef.current + 1)
+        if (didUnlock) {
+          const oldDepth = unlockedDepthRef.current
+          setNewlyUnlockedDepth({ from: oldDepth + 1, to: Math.min(oldDepth + 2, stateRef.current.lineLength) })
+        }
       }
       setIsUserTurn(false)
       setTimeout(() => startNewLineRef.current(), 2000)

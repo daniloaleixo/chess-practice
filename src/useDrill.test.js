@@ -192,7 +192,7 @@ describe('chunk-aware drilling', () => {
     )
     act(() => { result.current.handleUserMove('d2', 'd4') })
     act(() => { result.current.handleUserMove('c1', 'f4') })
-    expect(result.current.newlyUnlockedDepth).toBe(5)
+    expect(result.current.newlyUnlockedDepth).toEqual({ from: 5, to: 6 })
   })
 
   it('newlyUnlockedDepth is cleared on restartCurrentLine', () => {
@@ -202,7 +202,7 @@ describe('chunk-aware drilling', () => {
     )
     act(() => { result.current.handleUserMove('d2', 'd4') })
     act(() => { result.current.handleUserMove('c1', 'f4') })
-    expect(result.current.newlyUnlockedDepth).toBe(5)
+    expect(result.current.newlyUnlockedDepth).toEqual({ from: 5, to: 6 })
     act(() => { result.current.restartCurrentLine() })
     expect(result.current.newlyUnlockedDepth).toBeNull()
   })
