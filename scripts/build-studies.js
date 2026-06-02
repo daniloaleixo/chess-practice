@@ -26,7 +26,11 @@ export function extractChapterName(pgnText, filename) {
 function removeVariations(text) {
   let result = ''
   let depth = 0
+  let inComment = false
   for (const ch of text) {
+    if (!inComment && ch === '{') { inComment = true; result += ch; continue }
+    if (inComment && ch === '}')  { inComment = false; result += ch; continue }
+    if (inComment) { result += ch; continue }
     if (ch === '(') depth++
     else if (ch === ')') depth--
     else if (depth === 0) result += ch

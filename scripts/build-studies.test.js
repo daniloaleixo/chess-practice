@@ -129,6 +129,12 @@ describe('extractMoveAnnotations', () => {
     const result = extractMoveAnnotations(pgn)
     expect(result[0]).toBeNull()
   })
+
+  it('preserves parenthetical text inside comment blocks', () => {
+    const pgn = '[Event "T"]\n\n1. d4 { Two options: e3 (safe) or d5 (sharp) } Nf6 *'
+    const result = extractMoveAnnotations(pgn)
+    expect(result[0].text).toBe('Two options: e3 (safe) or d5 (sharp)')
+  })
 })
 
 describe('extractMainLine with annotations', () => {
