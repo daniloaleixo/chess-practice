@@ -363,3 +363,41 @@ body {
   outline: 2px solid #4ecca3;
   outline-offset: 1px;
 }
+
+.annotation-text {
+  margin: 0.75rem 0.5rem 0;
+  padding: 0.75rem;
+  background: #1e2d3d;
+  border-left: 3px solid #4a9eda;
+  border-radius: 0 4px 4px 0;
+}
+
+.annotation-text-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b8fa8;
+  margin-bottom: 0.4rem;
+}
+
+.annotation-text-body {
+  font-size: 0.85rem;
+  color: #c8d8e8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.chunk-settings-label--toggle {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chunk-settings-label--toggle input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #4a9eda;
+  cursor: pointer;
+  flex-shrink: 0;
+}

@@ -4,7 +4,7 @@ import { useDrill } from './useDrill'
 
 const FEEDBACK_DURATION_MS = 1500
 
-export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, recordCorrectAtDepth }) {
+export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, recordCorrectAtDepth, onAnnotationChange, showAnnotations }) {
   const [startFromChunk, setStartFromChunk] = useState(false)
   const {
     fen,
@@ -18,6 +18,7 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
     hint,
     restartCurrentLine,
     newlyUnlockedDepth,
+    currentAnnotation,
   } = useDrill(chapter, getScore, setScore, { unlockedDepth, startFromChunk, recordCorrectAtDepth })
 
   const [feedback, setFeedback] = useState(null)
@@ -33,6 +34,10 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
     prevStartFromChunk.current = startFromChunk
     restartCurrentLineRef.current()
   }, [startFromChunk])
+
+  useEffect(() => {
+    onAnnotationChange?.(currentAnnotation)
+  }, [currentAnnotation, onAnnotationChange])
 
   const tryMove = useCallback((sourceSquare, targetSquare) => {
     if (!isUserTurn || lockedRef.current) return false
@@ -80,9 +85,30 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
     if (san) setHintSan(san)
   }, [hint])
 
-  const squareStyles = selectedSquare
-    ? { [selectedSquare]: { backgroundColor: 'rgba(255,255,0,0.4)' } }
+  const ANNOTATION_COLOR_MAP = {
+    red: 'rgba(255, 0, 0, 0.4)',
+    green: 'rgba(0, 128, 0, 0.4)',
+    yellow: 'rgba(255, 255, 0, 0.4)',
+    blue: 'rgba(0, 0, 255, 0.4)',
+  }
+
+  const annotationSquareStyles = showAnnotations && currentAnnotation?.squares?.length
+    ? Object.fromEntries(
+        currentAnnotation.squares.map(({ square, color }) => [
+          square,
+          { backgroundColor: ANNOTATION_COLOR_MAP[color] ?? 'rgba(0,0,0,0.3)' },
+        ])
+      )
     : {}
+
+  const squareStyles = {
+    ...annotationSquareStyles,
+    ...(selectedSquare ? { [selectedSquare]: { backgroundColor: 'rgba(255,255,0,0.4)' } } : {}),
+  }
+
+  const customArrows = showAnnotations && currentAnnotation?.arrows?.length
+    ? currentAnnotation.arrows.map(({ from, to, color }) => ({ startSquare: from, endSquare: to, color }))
+    : []
 
   const moveNotation = moveHistory
     .map((move, i) => i % 2 === 0 ? `${Math.floor(i / 2) + 1}. ${move}` : move)
@@ -124,6 +150,7 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
               onPieceDrop,
               onSquareClick,
               squareStyles,
+              arrows: customArrows,
               boardStyle: { width: '480px', height: '480px' },
             }}
           />

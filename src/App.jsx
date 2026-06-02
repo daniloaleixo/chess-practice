@@ -7,10 +7,15 @@ export default function App() {
   const [chapters, setChapters] = useState(null)
   const [activeChapterId, setActiveChapterId] = useState(null)
   const [error, setError] = useState(null)
+  const [currentAnnotation, setCurrentAnnotation] = useState(null)
   const {
     getMasteredCount, getScore, setScore,
     chunkSettings, getUnlockedDepth, recordCorrectAtDepth, setChunkSettings,
   } = useProgress()
+
+  useEffect(() => {
+    setCurrentAnnotation(null)
+  }, [activeChapterId])
 
   useEffect(() => {
     fetch('/studies-with-eval.json')
@@ -29,6 +34,7 @@ export default function App() {
   const activeChapter = chapters.find(c => c.id === activeChapterId) ?? chapters[0]
   const maxLineLength = activeChapter.lines.reduce((max, l) => Math.max(max, l.positions.length), 0)
   const unlockedDepth = getUnlockedDepth(activeChapter.id, maxLineLength)
+  const showAnnotations = chunkSettings.showAnnotations
 
   return (
     <div className="app">
@@ -44,6 +50,7 @@ export default function App() {
           getUnlockedDepth={getUnlockedDepth}
           chunkSettings={chunkSettings}
           setChunkSettings={setChunkSettings}
+          currentAnnotation={currentAnnotation}
         />
         <main className="app-main">
           <PracticeBoard
@@ -53,6 +60,8 @@ export default function App() {
             setScore={setScore}
             unlockedDepth={unlockedDepth}
             recordCorrectAtDepth={recordCorrectAtDepth}
+            onAnnotationChange={setCurrentAnnotation}
+            showAnnotations={showAnnotations}
           />
         </main>
       </div>

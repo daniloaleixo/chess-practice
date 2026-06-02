@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect, getUnlockedDepth, chunkSettings, setChunkSettings }) {
+export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect, getUnlockedDepth, chunkSettings, setChunkSettings, currentAnnotation }) {
   const [settingsOpen, setSettingsOpen] = useState(false)
 
   return (
@@ -32,6 +32,13 @@ export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect,
           </div>
         )
       })}
+
+      {chunkSettings.showAnnotations && currentAnnotation?.text && (
+        <div className="annotation-text">
+          <div className="annotation-text-label">Annotation</div>
+          <p className="annotation-text-body">{currentAnnotation.text}</p>
+        </div>
+      )}
 
       <div className="chunk-settings">
         <button
@@ -68,6 +75,14 @@ export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect,
                   if (!Number.isFinite(n) || n < 1) return
                   setChunkSettings({ ...chunkSettings, unlockN: n })
                 }}
+              />
+            </label>
+            <label className="chunk-settings-label chunk-settings-label--toggle">
+              Show annotations
+              <input
+                type="checkbox"
+                checked={chunkSettings.showAnnotations}
+                onChange={e => setChunkSettings({ ...chunkSettings, showAnnotations: e.target.checked })}
               />
             </label>
           </div>
