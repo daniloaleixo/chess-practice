@@ -11,107 +11,336 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/5n2/2p5/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "The Benoni Systems",
+                "arrows": [
+                  {
+                    "from": "c7",
+                    "to": "c5",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/5n2/2pP4/5B2/8/PPP1PPPP/RN1QKBNR b KQkq - 0 3",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "White's best choice",
+                "arrows": [],
+                "squares": [
+                  {
+                    "square": "d5",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/p2ppppp/5n2/1ppP4/5B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 4",
               "move": "b5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Here black plays this b5 move, as it is iconic in the Benko Gambit. You may encounter this move if you're playing against a Benko Gambit player. White should not fear.",
+                "arrows": [
+                  {
+                    "from": "b7",
+                    "to": "b5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "c7",
+                    "to": "c5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "g8",
+                    "to": "f6",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b5",
+                    "color": "red"
+                  },
+                  {
+                    "square": "c5",
+                    "color": "red"
+                  },
+                  {
+                    "square": "f6",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/p2ppppp/5n2/1ppP4/P4B2/8/1PP1PPPP/RN1QKBNR b KQkq - 0 4",
               "move": "a4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "First we provoke the pawn forward.",
+                "arrows": [
+                  {
+                    "from": "a2",
+                    "to": "a4",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "a4",
+                    "to": "b5",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/p2ppppp/5n2/2pP4/Pp3B2/8/1PP1PPPP/RN1QKBNR w KQkq - 0 5",
               "move": "b4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/p2ppppp/5n2/2pP4/Pp3B2/5P2/1PP1P1PP/RN1QKBNR b KQkq - 0 5",
               "move": "f3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "And now, I think this is white's best choice. f3 prepares e4.",
+                "arrows": [
+                  {
+                    "from": "e2",
+                    "to": "e4",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "f3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/p3pppp/3p1n2/2pP4/Pp3B2/5P2/1PP1P1PP/RN1QKBNR w KQkq - 0 6",
               "move": "d6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/p3pppp/3p1n2/2pP4/Pp2PB2/5P2/1PP3PP/RN1QKBNR b KQkq - 0 6",
               "move": "e4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/p2npppp/3p1n2/2pP4/Pp2PB2/5P2/1PP3PP/RN1QKBNR w KQkq - 1 7",
               "move": "Nbd7",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Now that we controlled the center, we need to develop our pieces.",
+                "arrows": [],
+                "squares": [
+                  {
+                    "square": "e4",
+                    "color": "green"
+                  },
+                  {
+                    "square": "d5",
+                    "color": "green"
+                  },
+                  {
+                    "square": "f3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "b1",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "d1",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "f1",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "g1",
+                    "color": "blue"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqkb1r/p2npppp/3p1n2/2pP4/Pp2PB2/5P2/1PPN2PP/R2QKBNR b KQkq - 2 7",
               "move": "Nd2",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "The knight controls the weakened light squares",
+                "arrows": [
+                  {
+                    "from": "d2",
+                    "to": "c4",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "d2",
+                    "to": "b3",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "c4",
+                    "color": "yellow"
+                  },
+                  {
+                    "square": "b3",
+                    "color": "yellow"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqkb1r/p2npp1p/3p1np1/2pP4/Pp2PB2/5P2/1PPN2PP/R2QKBNR w KQkq - 0 8",
               "move": "g6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/p2npp1p/3p1np1/2pP4/PpN1PB2/5P2/1PP3PP/R2QKBNR b KQkq - 1 8",
               "move": "Nc4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Preparing to play Qd2 and Bh6",
+                "arrows": [
+                  {
+                    "from": "d1",
+                    "to": "d2",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "d2",
+                    "to": "h6",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "d2",
+                    "color": "blue"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqk2r/p2nppbp/3p1np1/2pP4/PpN1PB2/5P2/1PP3PP/R2QKBNR w KQkq - 2 9",
               "move": "Bg7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqk2r/p2nppbp/3p1np1/2pP4/PpN1PB2/5P2/1PPQ2PP/R3KBNR b KQkq - 3 9",
               "move": "Qd2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/p2nppbp/3p1np1/2pP4/PpN1PB2/5P2/1PPQ2PP/R3KBNR w KQ - 4 10",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/p2nppbp/3p1npB/2pP4/PpN1P3/5P2/1PPQ2PP/R3KBNR b KQ - 5 10",
               "move": "Bh6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Exchanging off black's painful dark squared bishop",
+                "arrows": [
+                  {
+                    "from": "h8",
+                    "to": "b2",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "g7",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqnrk1/p2nppbp/3p2pB/2pP4/PpN1P3/5P2/1PPQ2PP/R3KBNR w KQ - 6 11",
               "move": "Ne8",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqnrk1/p2nppbp/3p2pB/2pP4/PpN1P3/3B1P2/1PPQ2PP/R3K1NR b KQ - 7 11",
               "move": "Bd3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "White has a small edge here, a space advantage and black will lose their best piece\nBut as white you need to be a little prepared for black's counterplay with f7-f5",
+                "arrows": [
+                  {
+                    "from": "g1",
+                    "to": "e2",
+                    "color": "green"
+                  },
+                  {
+                    "from": "f7",
+                    "to": "f5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "f5",
+                    "to": "e4",
+                    "color": "red"
+                  },
+                  {
+                    "from": "g1",
+                    "to": "h3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e2",
+                    "color": "green"
+                  },
+                  {
+                    "square": "g7",
+                    "color": "red"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -128,157 +357,462 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/5n2/2p5/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Nf6 + c5 = Benoni\nOkay here you have two main options as white: e3/c3  or d5 .\nWe want to play for a win as white, so let's play d5",
+                "arrows": [
+                  {
+                    "from": "d4",
+                    "to": "d5",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e2",
+                    "to": "e3",
+                    "color": "red"
+                  },
+                  {
+                    "from": "c2",
+                    "to": "c3",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/5n2/2pP4/5B2/8/PPP1PPPP/RN1QKBNR b KQkq - 0 3",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "The idea is that we want to play into the Benoni Pawn Structures\nHere black has two moves. Qb6 is more critical, but I cover d6 too",
+                "arrows": [
+                  {
+                    "from": "d7",
+                    "to": "d6",
+                    "color": "red"
+                  },
+                  {
+                    "from": "d8",
+                    "to": "b6",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "d5",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/5B2/8/PPP1PPPP/RN1QKBNR w KQkq - 1 4",
               "move": "Qb6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Here we don't want to play moves like Bc1, so the only other option is Nc3.",
+                "arrows": [
+                  {
+                    "from": "b1",
+                    "to": "c3",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "f4",
+                    "to": "c1",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/5B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 2 4",
               "move": "Nc3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Here as white we must be willing to sacrifice the pawn and play aggressively.",
+                "arrows": [],
+                "squares": [
+                  {
+                    "square": "b2",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/5n2/2pP4/5B2/2N5/PqP1PPPP/R2QKBNR w KQkq - 0 5",
               "move": "Qxb2",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Here black got 1 pawn, but he's going to have to waste 3-4 tempi in exchange for it. As white here, that's usually a decent deal.",
+                "arrows": [
+                  {
+                    "from": "d8",
+                    "to": "b6",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "b6",
+                    "to": "b2",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "b2",
+                    "to": "b6",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "b6",
+                    "to": "d8",
+                    "color": "blue"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b2",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/5n2/2pP4/8/2N5/PqPBPPPP/R2QKBNR b KQkq - 1 5",
               "move": "Bd2",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Here black has to play Qb6- if he doesn't he will lose material",
+                "arrows": [
+                  {
+                    "from": "b2",
+                    "to": "b6",
+                    "color": "red"
+                  },
+                  {
+                    "from": "b2",
+                    "to": "b4",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "a7",
+                    "to": "a6",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b6",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/8/2N5/P1PBPPPP/R2QKBNR w KQkq - 2 6",
               "move": "Qb6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/4P3/2N5/P1PB1PPP/R2QKBNR b KQkq - 0 6",
               "move": "e4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp2pppp/1q1p1n2/2pP4/4P3/2N5/P1PB1PPP/R2QKBNR w KQkq - 0 7",
               "move": "d6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp2pppp/1q1p1n2/2pP4/4PP2/2N5/P1PB2PP/R2QKBNR b KQkq - 0 7",
               "move": "f4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "As white we must play aggressively and actively, so we need to attack in the center",
+                "arrows": [
+                  {
+                    "from": "f2",
+                    "to": "f4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e4",
+                    "to": "e5",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e5",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp2pp1p/1q1p1np1/2pP4/4PP2/2N5/P1PB2PP/R2QKBNR w KQkq - 0 8",
               "move": "g6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "I will show you how one line can go",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnb1kb1r/pp2pp1p/1q1p1np1/2pPP3/5P2/2N5/P1PB2PP/R2QKBNR b KQkq - 0 8",
               "move": "e5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp2pp1p/1q3np1/2pPp3/5P2/2N5/P1PB2PP/R2QKBNR w KQkq - 0 9",
               "move": "dxe5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp2pp1p/1q3np1/2pPP3/8/2N5/P1PB2PP/R2QKBNR b KQkq - 0 9",
               "move": "fxe5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp1npp1p/1q4p1/2pPP3/8/2N5/P1PB2PP/R2QKBNR w KQkq - 1 10",
               "move": "Nfd7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp1npp1p/1q4p1/2pPP3/8/2N2N2/P1PB2PP/R2QKB1R b KQkq - 2 10",
               "move": "Nf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1k2r/pp1nppbp/1q4p1/2pPP3/8/2N2N2/P1PB2PP/R2QKB1R w KQkq - 3 11",
               "move": "Bg7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1k2r/pp1nppbp/1q4p1/2pPP3/8/2N2N2/P1PB2PP/1R1QKB1R b Kkq - 4 11",
               "move": "Rb1",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/pp1nppbp/6p1/2pPP3/8/2N2N2/P1PB2PP/1R1QKB1R w Kkq - 5 12",
               "move": "Qd8",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/pp1nppbp/4P1p1/2pP4/8/2N2N2/P1PB2PP/1R1QKB1R b Kkq - 0 12",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/pp1np1bp/4p1p1/2pP4/8/2N2N2/P1PB2PP/1R1QKB1R w Kkq - 0 13",
               "move": "fxe6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/pp1np1bp/4p1p1/2pP2N1/8/2N5/P1PB2PP/1R1QKB1R b Kkq - 1 13",
               "move": "Ng5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/pp2p1bp/4pnp1/2pP2N1/8/2N5/P1PB2PP/1R1QKB1R w Kkq - 2 14",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/pp2p1bp/4pnp1/1BpP2N1/8/2N5/P1PB2PP/1R1QK2R b Kkq - 3 14",
               "move": "Bb5+",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1k1r/pp2p1bp/4pnp1/1BpP2N1/8/2N5/P1PB2PP/1R1QK2R w K - 4 15",
               "move": "Kf8",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1k1r/pp2p1bp/4Pnp1/1Bp3N1/8/2N5/P1PB2PP/1R1QK2R b K - 0 15",
               "move": "dxe6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq2kr/pp2p1bp/4Pnp1/1Bp3N1/8/2N5/P1PB2PP/1R1QK2R w K - 1 16",
               "move": "Kg8",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq2kr/pp2p1bp/4Pnp1/1Bp3N1/8/2N5/P1PB2PP/1R1Q1RK1 b - - 2 16",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "White has an edge here. All the pieces are out in the open and active",
+                "arrows": [
+                  {
+                    "from": "b1",
+                    "to": "b7",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "f1",
+                    "to": "f7",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "g5",
+                    "to": "f7",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "g5",
+                    "to": "e6",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "g5",
+                    "to": "h7",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "d2",
+                    "to": "h6",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "d2",
+                    "to": "a5",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "b5",
+                    "to": "a6",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "b5",
+                    "to": "e8",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "c3",
+                    "to": "d5",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "c3",
+                    "to": "b5",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "c3",
+                    "to": "e4",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "c3",
+                    "to": "a4",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "d1",
+                    "to": "h5",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "d1",
+                    "to": "d8",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "e6",
+                    "to": "f7",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "e6",
+                    "to": "d7",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "h8",
+                    "color": "red"
+                  },
+                  {
+                    "square": "a8",
+                    "color": "red"
+                  },
+                  {
+                    "square": "e6",
+                    "color": "green"
+                  },
+                  {
+                    "square": "g5",
+                    "color": "green"
+                  },
+                  {
+                    "square": "f1",
+                    "color": "green"
+                  },
+                  {
+                    "square": "d2",
+                    "color": "green"
+                  },
+                  {
+                    "square": "d1",
+                    "color": "green"
+                  },
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "b1",
+                    "color": "green"
+                  },
+                  {
+                    "square": "b5",
+                    "color": "green"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -295,67 +829,236 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "In this chapter I'll look at a variation you may see frequently",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkbnr/ppp1pppp/8/3p1b2/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3",
               "move": "Bf5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "It's where black plays this copycat move Bf5. There is a slight weakness with this move and that is that it leaves the b7 pawn unguarded.\nHere you have two ways to play. The safer way is to play e3 and Bd3. The more aggressive, riskier way is to play c4 and Qb3.",
+                "arrows": [
+                  {
+                    "from": "e2",
+                    "to": "e3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "f1",
+                    "to": "d3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "c2",
+                    "to": "c4",
+                    "color": "red"
+                  },
+                  {
+                    "from": "d1",
+                    "to": "b3",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "f5",
+                    "color": "red"
+                  },
+                  {
+                    "square": "b7",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rn1qkbnr/ppp1pppp/8/3p1b2/2PP1B2/8/PP2PPPP/RN1QKBNR b KQkq - 0 3",
               "move": "c4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "c4!! And this idea is to attack with a quick Qb3 similar to how black plays Qb6 against us.",
+                "arrows": [
+                  {
+                    "from": "c4",
+                    "to": "d5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "d1",
+                    "to": "b3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "b3",
+                    "to": "b7",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b7",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rn1qkbnr/ppp2ppp/4p3/3p1b2/2PP1B2/8/PP2PPPP/RN1QKBNR w KQkq - 0 4",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkbnr/ppp2ppp/4p3/3p1b2/2PP1B2/2N5/PP2PPPP/R2QKBNR b KQkq - 1 4",
               "move": "Nc3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Develop a piece first",
+                "arrows": [
+                  {
+                    "from": "b1",
+                    "to": "c3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rn1qkbnr/pp3ppp/2p1p3/3p1b2/2PP1B2/2N5/PP2PPPP/R2QKBNR w KQkq - 0 5",
               "move": "c6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkbnr/pp3ppp/2p1p3/3p1b2/2PP1B2/1QN5/PP2PPPP/R3KBNR b KQkq - 1 5",
               "move": "Qb3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "And now you attack this pawn like black does to us.",
+                "arrows": [
+                  {
+                    "from": "b3",
+                    "to": "b7",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rn2kbnr/pp3ppp/1qp1p3/3p1b2/2PP1B2/1QN5/PP2PPPP/R3KBNR w KQkq - 2 6",
               "move": "Qb6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn2kbnr/pp3ppp/1qp1p3/2Pp1b2/3P1B2/1QN5/PP2PPPP/R3KBNR b KQkq - 0 6",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "And now black MUST take the queen cause our bishop on f4 is preventing the black queen from going to c7",
+                "arrows": [
+                  {
+                    "from": "f4",
+                    "to": "c7",
+                    "color": "red"
+                  },
+                  {
+                    "from": "b6",
+                    "to": "c7",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "c7",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rn2kbnr/pp3ppp/2p1p3/2Pp1b2/3P1B2/1qN5/PP2PPPP/R3KBNR w KQkq - 0 7",
               "move": "Qxb3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn2kbnr/pp3ppp/2p1p3/2Pp1b2/3P1B2/1PN5/1P2PPPP/R3KBNR b KQkq - 0 7",
               "move": "axb3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "And now you have the plan to go b3-b4-b5, maybe play e3 and even Nf3-h4 to exchange off black's best piece",
+                "arrows": [
+                  {
+                    "from": "g1",
+                    "to": "f3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e2",
+                    "to": "e3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "f3",
+                    "to": "h4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "a1",
+                    "to": "a7",
+                    "color": "yellow"
+                  },
+                  {
+                    "from": "b3",
+                    "to": "b5",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e6",
+                    "to": "e5",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "f5",
+                    "color": "green"
+                  },
+                  {
+                    "square": "b5",
+                    "color": "green"
+                  },
+                  {
+                    "square": "e5",
+                    "color": "red"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -372,87 +1075,321 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "We've already talked about this a fair bit but I'd just like to go over a few extra things before we move on to 1...Nf6.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Okay so black can play this early c5 move and I talk about this Nf6 + c5 on move 2 setup in more detail on chapter 9.",
+                "arrows": [
+                  {
+                    "from": "c7",
+                    "to": "c5",
+                    "color": "blue"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkbnr/pp2pppp/8/2pp4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/pp2pppp/8/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Building our pyramid",
+                "arrows": [
+                  {
+                    "from": "c2",
+                    "to": "c3",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e3",
+                    "color": "red"
+                  },
+                  {
+                    "square": "d4",
+                    "color": "red"
+                  },
+                  {
+                    "square": "f2",
+                    "color": "red"
+                  },
+                  {
+                    "square": "c3",
+                    "color": "red"
+                  },
+                  {
+                    "square": "b2",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 1 4",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR b KQkq - 0 4",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR w KQkq - 1 5",
               "move": "Nc6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "In chapter 2, The Essential Ideas, I recommended you play Nd2 before Nf3. If you're wondering why that is, I encourage you check out the sideline 5.Nf3 to see what happens.",
+                "arrows": [
+                  {
+                    "from": "b1",
+                    "to": "d2",
+                    "color": "green"
+                  },
+                  {
+                    "from": "g1",
+                    "to": "f3",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "d2",
+                    "color": "green"
+                  },
+                  {
+                    "square": "f3",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1P3/PP1N1PPP/R2QKBNR b KQkq - 2 5",
               "move": "Nd2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1P3/PP1N1PPP/R2QKBNR w KQkq - 3 6",
               "move": "Qb6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Okay so this is a move I wanted to talk about a bit. Black's idea with the c5 move was for the queen to come to b6 and attack the b2 pawn. This is a move you need to watch out for in the London System, but if you know how to meet it then you're ok.",
+                "arrows": [
+                  {
+                    "from": "d8",
+                    "to": "b6",
+                    "color": "red"
+                  },
+                  {
+                    "from": "b6",
+                    "to": "b2",
+                    "color": "red"
+                  },
+                  {
+                    "from": "f4",
+                    "to": "c1",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b2",
+                    "color": "red"
+                  },
+                  {
+                    "square": "f4",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/1QP1P3/PP1N1PPP/R3KBNR b KQkq - 4 6",
               "move": "Qb3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Each side is hoping the other side will take the queen, in which case the a-file will be opened up.",
+                "arrows": [
+                  {
+                    "from": "b3",
+                    "to": "b6",
+                    "color": "red"
+                  },
+                  {
+                    "from": "b6",
+                    "to": "b3",
+                    "color": "red"
+                  },
+                  {
+                    "from": "a2",
+                    "to": "b3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "a7",
+                    "to": "b6",
+                    "color": "green"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "r1b1kb1r/pp2pppp/1qn2n2/3p4/2pP1B2/1QP1P3/PP1N1PPP/R3KBNR w KQkq - 0 7",
               "move": "c4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Here black tries to force white to trade queens, but we will just move to c2.",
+                "arrows": [
+                  {
+                    "from": "c5",
+                    "to": "c4",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "r1b1kb1r/pp2pppp/1qn2n2/3p4/2pP1B2/2P1P3/PPQN1PPP/R3KBNR b KQkq - 1 7",
               "move": "Qc2",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "And now black has to deal with the white pawn breaks b3 and e4. White is better because he has the active pawn breaks, and black's c5-c4 gaining-space move is, in fact, a passive move.",
+                "arrows": [
+                  {
+                    "from": "b2",
+                    "to": "b3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e3",
+                    "to": "e4",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "e4",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1b1kb1r/pp3ppp/1qn1pn2/3p4/2pP1B2/2P1P3/PPQN1PPP/R3KBNR w KQkq - 0 8",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b1kb1r/pp3ppp/1qn1pn2/3p4/2pP1B2/1PP1P3/P1QN1PPP/R3KBNR b KQkq - 0 8",
               "move": "b3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "There it goes with our pawn break b3. White gets a very good game",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "r1b1kb1r/pp3ppp/1qn1pn2/3p4/3P1B2/1pP1P3/P1QN1PPP/R3KBNR w KQkq - 0 9",
               "move": "cxb3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b1kb1r/pp3ppp/1qn1pn2/3p4/3P1B2/1PP1P3/2QN1PPP/R3KBNR b KQkq - 0 9",
               "move": "axb3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "White has the better pawn structure",
+                "arrows": [
+                  {
+                    "from": "c3",
+                    "to": "c4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "c4",
+                    "to": "d5",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "d4",
+                    "color": "green"
+                  },
+                  {
+                    "square": "e3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "f2",
+                    "color": "green"
+                  },
+                  {
+                    "square": "g2",
+                    "color": "green"
+                  },
+                  {
+                    "square": "h2",
+                    "color": "green"
+                  },
+                  {
+                    "square": "a7",
+                    "color": "red"
+                  },
+                  {
+                    "square": "b7",
+                    "color": "red"
+                  },
+                  {
+                    "square": "d5",
+                    "color": "red"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -469,97 +1406,140 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Alright... BACK TO THE SUBJECT.. :1... d5 2. Bf4 Nf6 3. e3 g6 4. Nc3 { Remember as soon as they go g6 you go Nc3",
+                "arrows": [
+                  {
+                    "from": "g7",
+                    "to": "g6",
+                    "color": "green"
+                  },
+                  {
+                    "from": "b1",
+                    "to": "c3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "g6",
+                    "color": "green"
+                  },
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "g6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3",
               "move": "Nc3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp1pp1p/5np1/3p4/3P1B2/2N5/PPP1PPPP/R2QKBNR w KQkq - 0 4",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp1pp1p/5np1/3p4/3P1B2/2N1P3/PPP2PPP/R2QKBNR b KQkq - 0 4",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppp1ppbp/5np1/3p4/3P1B2/2N1P3/PPP2PPP/R2QKBNR w KQkq - 1 5",
               "move": "Bg7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppp1ppbp/5np1/3p4/3P1B1P/2N1P3/PPP2PP1/R2QKBNR b KQkq - 0 5",
               "move": "h4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/5np1/3p4/3P1B1P/2N1P3/PPP2PP1/R2QKBNR w KQ - 1 6",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/5np1/3p3P/3P1B2/2N1P3/PPP2PP1/R2QKBNR b KQ - 0 6",
               "move": "h5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/6p1/3p3n/3P1B2/2N1P3/PPP2PP1/R2QKBNR w KQ - 0 7",
               "move": "Nxh5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/6p1/3p3R/3P1B2/2N1P3/PPP2PP1/R2QKBN1 b Q - 0 7",
               "move": "Rxh5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/8/3p3p/3P1B2/2N1P3/PPP2PP1/R2QKBN1 w Q - 0 8",
               "move": "gxh5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/8/3p3Q/3P1B2/2N1P3/PPP2PP1/R3KBN1 b Q - 0 8",
               "move": "Qxh5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1p1bp/8/3p1p1Q/3P1B2/2N1P3/PPP2PP1/R3KBN1 w Q - 0 9",
               "move": "f5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1p1bp/8/3p1p2/3P1B2/2N1P3/PPP2PPQ/R3KBN1 b Q - 1 9",
               "move": "Qh2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/ppp1p1bp/n7/3p1p2/3P1B2/2N1P3/PPP2PPQ/R3KBN1 w Q - 2 10",
               "move": "Na6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/ppp1p1bp/n7/3p1p2/3P1B2/2N1P3/PPP2PPQ/2KR1BN1 b - - 3 10",
               "move": "O-O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             }
           ]
         }
@@ -576,137 +1556,189 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Now at this point if black plays d5, we transpose back into our first chapters. But today we're going to talk about when black plays g6.",
+                "arrows": [
+                  {
+                    "from": "d7",
+                    "to": "d5",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "g6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": null,
+                "arrows": [
+                  {
+                    "from": "g7",
+                    "to": "g6",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "g6",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3",
               "move": "Nc3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR w KQkq - 2 4",
               "move": "Bg7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppppppbp/5np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR b KQkq - 0 4",
               "move": "e4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5",
               "move": "d6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR b KQkq - 1 5",
               "move": "Qd2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR w KQ - 2 6",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR b - - 3 6",
               "move": "O-O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/ppp1ppbp/2np1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR w - - 4 7",
               "move": "Nc6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/ppp1ppbp/2np1np1/8/3PPB2/2N2N2/PPPQ1PPP/2KR1B1R b - - 5 7",
               "move": "Nf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2q1rk1/ppp1ppbp/2np1np1/8/3PPBb1/2N2N2/PPPQ1PPP/2KR1B1R w - - 6 8",
               "move": "Bg4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2q1rk1/ppp1ppbp/2np1np1/8/3PPBb1/2N1QN2/PPP2PPP/2KR1B1R b - - 7 8",
               "move": "Qe3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2q1rk1/pppnppbp/2np2p1/8/3PPBb1/2N1QN2/PPP2PPP/2KR1B1R w - - 8 9",
               "move": "Nd7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2q1rk1/pppnppbp/2np2p1/6B1/3PP1b1/2N1QN2/PPP2PPP/2KR1B1R b - - 9 9",
               "move": "Bg5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qrk1/pppnppbp/2np2p1/6B1/3PP1b1/2N1QN2/PPP2PPP/2KR1B1R w - - 10 10",
               "move": "Qe8",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qrk1/pppnppbp/2np2pB/8/3PP1b1/2N1QN2/PPP2PPP/2KR1B1R b - - 11 10",
               "move": "Bh6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qrk1/pppnppbp/2np2pB/8/3PP3/2N1Qb2/PPP2PPP/2KR1B1R w - - 0 11",
               "move": "Bxf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qrk1/pppnppbp/2np2pB/8/3PP3/2N1QP2/PPP2P1P/2KR1B1R b - - 0 11",
               "move": "gxf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qrk1/pppn1pbp/2np2pB/4p3/3PP3/2N1QP2/PPP2P1P/2KR1B1R w - - 0 12",
               "move": "e5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qrk1/pppn1pBp/2np2p1/4p3/3PP3/2N1QP2/PPP2P1P/2KR1B1R b - - 0 12",
               "move": "Bxg7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qr2/pppn1pkp/2np2p1/4p3/3PP3/2N1QP2/PPP2P1P/2KR1B1R w - - 0 13",
               "move": "Kxg7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3qr2/pppn1pkp/2np2p1/4P3/4P3/2N1QP2/PPP2P1P/2KR1B1R b - - 0 13",
               "move": "dxe5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r4r2/pppn1pkp/2np2p1/4q3/4P3/2N1QP2/PPP2P1P/2KR1B1R w - - 0 14",
               "move": "Qxe5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r4r2/pppn1pkp/2np2p1/3Nq3/4P3/4QP2/PPP2P1P/2KR1B1R b - - 1 14",
               "move": "Nd5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             }
           ]
         }
@@ -723,17 +1755,20 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             }
           ]
         }
@@ -750,102 +1785,445 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "In this chapter I'll explain the main ideas you will do in most London Opening games.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Our London Opening move.\nPlan Part #1: Start with d4 and Bf4.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Plan Part #2: Build a Pyramid! Play the moves e3 and c3 as soon as you can!",
+                "arrows": [
+                  {
+                    "from": "c2",
+                    "to": "c3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "e3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "When c5 hits you never want to take on c5. The main reason is because when you take something you RELEASE TENSION and releasing tension is bad. You don't want to capture with your d4 pawn cause then you're just gonna destroy your own pyramid. Instead you let them take us. If they ever play cxd4, you almost always capture back with the e-pawn.",
+                "arrows": [
+                  {
+                    "from": "e3",
+                    "to": "d4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "c5",
+                    "to": "d4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "d4",
+                    "to": "c5",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "d4",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR b KQkq - 0 4",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Your goal is to have e3 already played and to MEET C5 WITH C3.",
+                "arrows": [
+                  {
+                    "from": "c7",
+                    "to": "c5",
+                    "color": "green"
+                  },
+                  {
+                    "from": "c2",
+                    "to": "c3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pp3ppp/4pn2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR w KQkq - 0 5",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Plan Part #3: Develop your remaining minor pieces.\nThe question is, where? The answer? Where they are closest to the CENTER!! The center is where your pieces are the most powerful, so we should get our pieces towards there. Thus, the best squares for our pieces are Nd2, Nf3 and Bd3.",
+                "arrows": [
+                  {
+                    "from": "f1",
+                    "to": "d3",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "b1",
+                    "to": "d2",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "g1",
+                    "to": "f3",
+                    "color": "blue"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/pp3ppp/4pn2/2pp4/3P1B2/2P1P3/PP1N1PPP/R2QKBNR b KQkq - 1 5",
               "move": "Nd2",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "I recommend developing the queen's knight before the king's knight, because there are some nasty things that can happen if you play Nf3 too early. You can avoid these annoyances by developing the queen knight first.",
+                "arrows": [
+                  {
+                    "from": "g1",
+                    "to": "f3",
+                    "color": "red"
+                  },
+                  {
+                    "from": "b1",
+                    "to": "d2",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "d2",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1P3/PP1N1PPP/R2QKBNR w KQkq - 2 6",
               "move": "Nc6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq - 3 6",
               "move": "Ngf3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Both knights are out to their best squares\nHere black can play either Bd6 or Be7. Be7 is more passive. I created a sideline so you can see my recommendation for what to do if they play that.\nThe mainline runs Bd6.",
+                "arrows": [
+                  {
+                    "from": "f8",
+                    "to": "e7",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "f8",
+                    "to": "d6",
+                    "color": "blue"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "r1bqk2r/pp3ppp/2nbpn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R w KQkq - 4 7",
               "move": "Bd6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "IDEA #4: The \"Standoff\" as GM Simon Williams likes to call it. There are two pistols aiming at each other. When black plays Bd6 aiming at your bishop, you've got to remember to NOT TAKE, but to drop this bishop back to g3.\nIf you take, you help black to develop the queen and they can play e5 next. That is unacceptable.",
+                "arrows": [
+                  {
+                    "from": "f4",
+                    "to": "d6",
+                    "color": "red"
+                  },
+                  {
+                    "from": "f4",
+                    "to": "g3",
+                    "color": "green"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "r1bqk2r/pp3ppp/2nbpn2/2pp4/3P4/2P1PNB1/PP1N1PPP/R2QKB1R b KQkq - 5 7",
               "move": "Bg3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Generally when you are given a choice whether to make an exchange or not, you should NOT do the exchange, but KEEP THE TENSION and let your opponent make the exchange. If black takes the bishop on g3, which weaker plays often do, you get a free open file and g-pawn battering rams. These are both excellent resources when you do your kingside attack.",
+                "arrows": [
+                  {
+                    "from": "d6",
+                    "to": "g3",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "h2",
+                    "to": "g3",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "h1",
+                    "to": "h8",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2P1PNB1/PP1N1PPP/R2QKB1R w KQ - 6 8",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2PBPNB1/PP1N1PPP/R2QK2R b KQ - 7 8",
               "move": "Bd3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "We completed idea 3, developing all our minor pieces",
+                "arrows": [],
+                "squares": [
+                  {
+                    "square": "d3",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "d2",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "f3",
+                    "color": "blue"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqr1k1/pp3ppp/2nbpn2/2pp4/3P4/2PBPNB1/PP1N1PPP/R2QK2R w KQ - 8 9",
               "move": "Re8",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Okay here is a typical example where black is going to play e6-e5, break up the center and free up his position and his light squared bishop.\n**GOLDEN RULE** #4: You should *NEVER* allow black to play e5. You have to block this square.",
+                "arrows": [
+                  {
+                    "from": "f8",
+                    "to": "e8",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e8",
+                    "to": "e5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e6",
+                    "to": "e5",
+                    "color": "blue"
+                  },
+                  {
+                    "from": "c8",
+                    "to": "f5",
+                    "color": "yellow"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e5",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "c8",
+                    "color": "yellow"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1bqr1k1/pp3ppp/2nbpn2/2ppN3/3P4/2PBP1B1/PP1N1PPP/R2QK2R b KQ - 9 9",
               "move": "Ne5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "**GOLDEN RULE** #5 Play Ne5. You have to play this at some point in the London System in order to get into the middlegame. With the move Ne5, we are:\n1. Preventing black from playing e5. *Super important, please take note of this*\n2. Occupying the center, the very best thing you can do\n3. Getting ready to play f4 next  and thereby setting up potential for a kingside attack.",
+                "arrows": [
+                  {
+                    "from": "f2",
+                    "to": "f4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e6",
+                    "to": "e5",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e5",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1b1r1k1/ppq2ppp/2nbpn2/2ppN3/3P4/2PBP1B1/PP1N1PPP/R2QK2R w KQ - 10 10",
               "move": "Qc7",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "The knight is attacked by too many pieces and not supported enough.",
+                "arrows": [
+                  {
+                    "from": "c7",
+                    "to": "e5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "c6",
+                    "to": "e5",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e5",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1b1r1k1/ppq2ppp/2nbpn2/2ppN3/3P1P2/2PBP1B1/PP1N2PP/R2QK2R b KQ - 0 10",
               "move": "f4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "GOLDEN IDEA #6: Convert the \"Pyramid\" into what's known as a \"Stonewall\". \nThis is your main goal in the London System out of the opening. You want to have:\n1. Got all your pieces out and working, controlling both light and dark squares\n2. Stopped black playing e5 \n3. Built your stonewall successfully",
+                "arrows": [
+                  {
+                    "from": "d3",
+                    "to": "e4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "d2",
+                    "to": "e4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "b2",
+                    "to": "d4",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e3",
+                    "to": "d4",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e3",
+                    "to": "f4",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e4",
+                    "color": "green"
+                  },
+                  {
+                    "square": "b2",
+                    "color": "red"
+                  },
+                  {
+                    "square": "c3",
+                    "color": "red"
+                  },
+                  {
+                    "square": "d4",
+                    "color": "red"
+                  },
+                  {
+                    "square": "f4",
+                    "color": "red"
+                  },
+                  {
+                    "square": "e3",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "r1b1r1k1/p1q2ppp/1pnbpn2/2ppN3/3P1P2/2PBP1B1/PP1N2PP/R2QK2R w KQ - 0 11",
               "move": "b6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Now what do we do? We're in the middlegame. The plan is pretty straight forward: Put everything on the kingside and checkmate black. :10... cxd4 11. exd4 { If black captures on d4 you always recapture with e3 pawn",
+                "arrows": [
+                  {
+                    "from": "c5",
+                    "to": "d4",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e3",
+                    "to": "d4",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             }
           ]
         }
@@ -862,102 +2240,212 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkbnr/ppp1pppp/8/3p1b2/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3",
               "move": "Bf5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "We've all seen it - your opponent goes for the old \"mirror their moves until they make a mistake\" trick when they don't know your opening. No matter their reason, this is not a refutation of the London.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rn1qkbnr/ppp1pppp/8/3p1b2/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkbnr/ppp2ppp/4p3/3p1b2/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkbnr/ppp2ppp/4p3/3p1b2/3P1B2/3BP3/PPP2PPP/RN1QK1NR b KQkq - 1 4",
               "move": "Bd3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Swapping bishops is the way to go here.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rn1qkbnr/ppp2ppp/4p3/3p4/3P1B2/3bP3/PPP2PPP/RN1QK1NR w KQkq - 0 5",
               "move": "Bxd3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkbnr/ppp2ppp/4p3/3p4/3P1B2/3QP3/PPP2PPP/RN2K1NR b KQkq - 0 5",
               "move": "Qxd3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "And now we just continue the London setup as per usual.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rn1qkb1r/ppp2ppp/4pn2/3p4/3P1B2/3QP3/PPP2PPP/RN2K1NR w KQkq - 1 6",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "In Carlsen - Giri, c6 was played instead here but Nf6 is good too.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rn1qkb1r/ppp2ppp/4pn2/3p4/3P1B2/3QPN2/PPP2PPP/RN2K2R b KQkq - 2 6",
               "move": "Nf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkb1r/pp3ppp/4pn2/2pp4/3P1B2/3QPN2/PPP2PPP/RN2K2R w KQkq - 0 7",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn1qkb1r/pp3ppp/4pn2/2pp4/3P1B2/2PQPN2/PP3PPP/RN2K2R b KQkq - 0 7",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2qkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2PQPN2/PP3PPP/RN2K2R w KQkq - 1 8",
               "move": "Nc6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2qkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2PQPN2/PP1N1PPP/R3K2R b KQkq - 2 8",
               "move": "Nbd2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2qk2r/pp3ppp/2nbpn2/2pp4/3P1B2/2PQPN2/PP1N1PPP/R3K2R w KQkq - 3 9",
               "move": "Bd6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2qk2r/pp3ppp/2nbpn2/2pp4/3P4/2PQPNB1/PP1N1PPP/R3K2R b KQkq - 4 9",
               "move": "Bg3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2qk2r/pp3ppp/2n1pn2/2pp4/3P4/2PQPNb1/PP1N1PPP/R3K2R w KQkq - 0 10",
               "move": "Bxg3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2qk2r/pp3ppp/2n1pn2/2pp4/3P4/2PQPNP1/PP1N1PP1/R3K2R b KQkq - 0 10",
               "move": "hxg3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r2q1rk1/pp3ppp/2n1pn2/2pp4/3P4/2PQPNP1/PP1N1PP1/R3K2R w KQ - 1 11",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Perfectly natural, but white has a clear edge here, with a number of good plans. Better is Qb6. Either way, it's typical London play from here.",
+                "arrows": [
+                  {
+                    "from": "f3",
+                    "to": "e5",
+                    "color": "green"
+                  },
+                  {
+                    "from": "d2",
+                    "to": "f3",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e1",
+                    "to": "g1",
+                    "color": "green"
+                  },
+                  {
+                    "from": "h1",
+                    "to": "h7",
+                    "color": "red"
+                  },
+                  {
+                    "from": "d3",
+                    "to": "h7",
+                    "color": "red"
+                  },
+                  {
+                    "from": "g3",
+                    "to": "g4",
+                    "color": "red"
+                  },
+                  {
+                    "from": "g4",
+                    "to": "g5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e1",
+                    "to": "c1",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e5",
+                    "color": "green"
+                  },
+                  {
+                    "square": "f3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "h7",
+                    "color": "red"
+                  },
+                  {
+                    "square": "g5",
+                    "color": "red"
+                  },
+                  {
+                    "square": "g4",
+                    "color": "red"
+                  },
+                  {
+                    "square": "g3",
+                    "color": "red"
+                  },
+                  {
+                    "square": "e1",
+                    "color": "green"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -974,47 +2462,64 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR b KQkq - 0 4",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "A typical London setup...",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/3p4/3p1B2/2P1P3/PP3PPP/RN1QKBNR w KQkq - 0 5",
               "move": "cxd4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "… but the opponent doesn't want that! Surely swapping a flank pawn for a centre pawn is good, they say. How do we refute this strange play?",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/3p4/3P1B2/2P5/PP3PPP/RN1QKBNR b KQkq - 0 5",
               "move": "exd4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             }
           ]
         }
@@ -1031,87 +2536,112 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 1 4",
               "move": "Nf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/8/2pp4/3PnB2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 2 5",
               "move": "Ne4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Their plan is usually to swap on d2, which can confuse the uninitiated London player. However, this shouldn't scare you!",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnbqkb1r/pp2pppp/8/2pp4/3PnB2/4PN2/PPPN1PPP/R2QKB1R b KQkq - 3 5",
               "move": "Nbd2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/8/2pp4/3P1B2/4PN2/PPPn1PPP/R2QKB1R w KQkq - 0 6",
               "move": "Nxd2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp2pppp/8/2pp4/3P1B2/4PN2/PPPQ1PPP/R3KB1R b KQkq - 0 6",
               "move": "Qxd2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp3ppp/4p3/2pp4/3P1B2/4PN2/PPPQ1PPP/R3KB1R w KQkq - 0 7",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp3ppp/4p3/2pp4/3P1B2/4PN2/PPPQBPPP/R3K2R b KQkq - 1 7",
               "move": "Be2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp3ppp/2n1p3/2pp4/3P1B2/4PN2/PPPQBPPP/R3K2R w KQkq - 2 8",
               "move": "Nc6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp3ppp/2n1p3/2pp4/3P1B2/4PN2/PPPQBPPP/R4RK1 b kq - 3 8",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp4pp/2n1pp2/2pp4/3P1B2/4PN2/PPPQBPPP/R4RK1 w kq - 0 9",
               "move": "f6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp4pp/2n1pp2/2pp4/3P1B2/2P1PN2/PP1QBPPP/R4RK1 b kq - 0 9",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Despite black's attempts, we have now reached a better-than-usual London position.",
+                "arrows": [],
+                "squares": []
+              }
             }
           ]
         }
@@ -1128,107 +2658,275 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Now let's take a look at 2...c6.\nThis c6 move became theorized by two lichess users, @Water_Flame and @SirDillyMoves. It has recently become very, very popular, so it's critical that you are prepared.\nThe two users made a study of their own on this clever idea. You may check their study out here: https://lichess.org/study/z7zyHqgV",
+                "arrows": [
+                  {
+                    "from": "c7",
+                    "to": "c6",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "c6",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/2p2n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "c6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "This looks like a pretty quiet move, and you may be thinking black wants to get a passive Slav structure. But black's sneaky idea is that if white plays e3, black can pounce with g5. It looks wacky, I know, but believe it or not there is no refutation to it.\nAs white, we should try to avoid the complications of this g5 idea. So in this case I'm recommending you play 3.c3 here.",
+                "arrows": [
+                  {
+                    "from": "e2",
+                    "to": "e3",
+                    "color": "red"
+                  },
+                  {
+                    "from": "g7",
+                    "to": "g5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "c2",
+                    "to": "c3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "c6",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/2p2n2/8/3P1B2/2P5/PP2PPPP/RN1QKBNR b KQkq - 0 3",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "We continue with our idea of building a pyramid; we just start with c3 in this case.\nWhat the move c3 does is it rules g5 out because we would simply be able to take that pawn for free, and when black plays Qa5 our king will not be checked.",
+                "arrows": [
+                  {
+                    "from": "g7",
+                    "to": "g5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e2",
+                    "to": "e3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  },
+                  {
+                    "square": "e3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1qp2n2/8/3P1B2/2P5/PP2PPPP/RN1QKBNR w KQkq - 1 4",
               "move": "Qb6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1qp2n2/8/3P1B2/2P5/PPQ1PPPP/RN2KBNR b KQkq - 2 4",
               "move": "Qc2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp2pppp/1qp2n2/3p4/3P1B2/2P5/PPQ1PPPP/RN2KBNR w KQkq - 0 5",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": null,
+                "arrows": [
+                  {
+                    "from": "b1",
+                    "to": "d2",
+                    "color": "green"
+                  },
+                  {
+                    "from": "a2",
+                    "to": "a4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "a4",
+                    "to": "a5",
+                    "color": "green"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnb1kb1r/pp2pppp/1qp2n2/3p4/3P1B2/2P5/PPQNPPPP/R3KBNR b KQkq - 1 5",
               "move": "Nd2",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "And now white is, for the most part, back into normal London System structures.\nMaybe white doesn't have a huge advantage here, but we get our nice easy-to-play position and black didn't get the chance to pull out a huge bag of tricks.",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnb1kb1r/pp2pp1p/1qp2np1/3p4/3P1B2/2P5/PPQNPPPP/R3KBNR w KQkq - 0 6",
               "move": "g6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp2pp1p/1qp2np1/3p4/3P1B2/2P1P3/PPQN1PPP/R3KBNR b KQkq - 0 6",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn2kb1r/pp2pp1p/1qp2np1/3p1b2/3P1B2/2P1P3/PPQN1PPP/R3KBNR w KQkq - 1 7",
               "move": "Bf5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn2kb1r/pp2pp1p/1qp2np1/3p1b2/3P1B2/2PBP3/PPQN1PPP/R3K1NR b KQkq - 2 7",
               "move": "Bd3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn2kb1r/pp2pp1p/1qp2np1/3p4/3P1B2/2PbP3/PPQN1PPP/R3K1NR w KQkq - 0 8",
               "move": "Bxd3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn2kb1r/pp2pp1p/1qp2np1/3p4/3P1B2/2PQP3/PP1N1PPP/R3K1NR b KQkq - 0 8",
               "move": "Qxd3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "If black ever takes on b2 then you can play Rb1 and you should be OK",
+                "arrows": [
+                  {
+                    "from": "b6",
+                    "to": "b2",
+                    "color": "red"
+                  },
+                  {
+                    "from": "a1",
+                    "to": "b1",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rn2k2r/pp2ppbp/1qp2np1/3p4/3P1B2/2PQP3/PP1N1PPP/R3K1NR w KQkq - 1 9",
               "move": "Bg7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rn2k2r/pp2ppbp/1qp2np1/3p4/3P1B2/2PQPN2/PP1N1PPP/R3K2R b KQkq - 2 9",
               "move": "Ngf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3k2r/pp1nppbp/1qp2np1/3p4/3P1B2/2PQPN2/PP1N1PPP/R3K2R w KQkq - 3 10",
               "move": "Nbd7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r3k2r/pp1nppbp/1qp2np1/3p4/3P1B2/2PQPN2/PP1N1PPP/R4RK1 b kq - 4 10",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r4rk1/pp1nppbp/1qp2np1/3p4/3P1B2/2PQPN2/PP1N1PPP/R4RK1 w - - 5 11",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r4rk1/pp1nppbp/1qp2np1/3p4/3P1B2/2PQPN1P/PP1N1PP1/R4RK1 b - - 0 11",
               "move": "h3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Normal London System position- white has a small advantage here- all the pieces are out and white has no weaknesses\nThe pawn break e4 is coming",
+                "arrows": [
+                  {
+                    "from": "e3",
+                    "to": "e4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "f1",
+                    "to": "e1",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "f3",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "f4",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "d3",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "d2",
+                    "color": "blue"
+                  },
+                  {
+                    "square": "e4",
+                    "color": "green"
+                  },
+                  {
+                    "square": "e1",
+                    "color": "green"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -1245,127 +2943,254 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/5n2/2p5/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "This is the Benoni system for black.\nMost London System players don't think too much of this and just casually play e3 here. However, white can only get a draw or a loss there. You can see the sideline if you wish.",
+                "arrows": [
+                  {
+                    "from": "c7",
+                    "to": "c5",
+                    "color": "red"
+                  },
+                  {
+                    "from": "e2",
+                    "to": "e3",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnbqkb1r/pp1ppppp/5n2/2pP4/5B2/8/PPP1PPPP/RN1QKBNR b KQkq - 0 3",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "As white we must play aggressively and sacrifice the b2 pawn.",
+                "arrows": [
+                  {
+                    "from": "d8",
+                    "to": "b6",
+                    "color": "red"
+                  },
+                  {
+                    "from": "b6",
+                    "to": "b2",
+                    "color": "red"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "b2",
+                    "color": "red"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/5B2/8/PPP1PPPP/RN1QKBNR w KQkq - 1 4",
               "move": "Qb6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/5B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 2 4",
               "move": "Nc3",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "We have no choice",
+                "arrows": [],
+                "squares": [
+                  {
+                    "square": "c3",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/5n2/2pP4/5B2/2N5/PqP1PPPP/R2QKBNR w KQkq - 0 5",
               "move": "Qxb2",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/5n2/2pP4/8/2N5/PqPBPPPP/R2QKBNR b KQkq - 1 5",
               "move": "Bd2",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "Black has to move the queen back to b6. If he doesn't, he will lose material.",
+                "arrows": [
+                  {
+                    "from": "b2",
+                    "to": "b6",
+                    "color": "red"
+                  }
+                ],
+                "squares": []
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/8/2N5/P1PBPPPP/R2QKBNR w KQkq - 2 6",
               "move": "Qb6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "In some cases the queen may have to move back to d8 again. And if your opponent has to waste 3-4 tempo to get 1 pawn, that's usually a pretty good deal.",
+                "arrows": [
+                  {
+                    "from": "b6",
+                    "to": "d8",
+                    "color": "blue"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "d8",
+                    "color": "blue"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp1ppppp/1q3n2/2pP4/4P3/2N5/P1PB1PPP/R2QKBNR b KQkq - 0 6",
               "move": "e4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "White's intention is to try to mow through the center with e5 and thrust the center.",
+                "arrows": [
+                  {
+                    "from": "f2",
+                    "to": "f4",
+                    "color": "green"
+                  },
+                  {
+                    "from": "e4",
+                    "to": "e5",
+                    "color": "green"
+                  }
+                ],
+                "squares": [
+                  {
+                    "square": "e4",
+                    "color": "green"
+                  }
+                ]
+              }
             },
             {
               "fen": "rnb1kb1r/pp2pppp/1q1p1n2/2pP4/4P3/2N5/P1PB1PPP/R2QKBNR w KQkq - 0 7",
               "move": "d6",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "For example I will show you how a game could go",
+                "arrows": [],
+                "squares": []
+              }
             },
             {
               "fen": "rnb1kb1r/pp2pppp/1q1p1n2/2pP4/4PP2/2N5/P1PB2PP/R2QKBNR b KQkq - 0 7",
               "move": "f4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp3ppp/1q1p1n2/2pPp3/4PP2/2N5/P1PB2PP/R2QKBNR w KQkq e6 0 8",
               "move": "e5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp3ppp/1q1p1n2/2pPP3/4P3/2N5/P1PB2PP/R2QKBNR b KQkq - 0 8",
               "move": "fxe5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp3ppp/1q3n2/2pPp3/4P3/2N5/P1PB2PP/R2QKBNR w KQkq - 0 9",
               "move": "dxe5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnb1kb1r/pp3ppp/1q3n2/2pPp3/4P3/2N2N2/P1PB2PP/R2QKB1R b KQkq - 1 9",
               "move": "Nf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b1kb1r/pp1n1ppp/1q3n2/2pPp3/4P3/2N2N2/P1PB2PP/R2QKB1R w KQkq - 2 10",
               "move": "Nbd7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b1kb1r/pp1n1ppp/1q3n2/2pPp3/2B1P3/2N2N2/P1PB2PP/R2QK2R b KQkq - 3 10",
               "move": "Bc4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b1k2r/pp1nbppp/1q3n2/2pPp3/2B1P3/2N2N2/P1PB2PP/R2QK2R w KQkq - 4 11",
               "move": "Be7",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b1k2r/pp1nbppp/1q3n2/2pPp3/2B1P3/2N2N2/P1PB2PP/R2Q1RK1 b kq - 5 11",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b2rk1/pp1nbppp/1q3n2/2pPp3/2B1P3/2N2N2/P1PB2PP/R2Q1RK1 w - - 6 12",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1b2rk1/pp1nbppp/1q3n2/2pPp3/2B1P3/2N2N2/P1PB2PP/R3QRK1 b - - 7 12",
               "move": "Qe1",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/pp1nbppp/5n2/2pPp3/2B1P3/2N2N2/P1PB2PP/R3QRK1 w - - 8 13",
               "move": "Qd8",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bq1rk1/pp1nbppp/5n2/2pPp3/P1B1P3/2N2N2/2PB2PP/R3QRK1 b - - 0 13",
               "move": "a4",
-              "cp": null
+              "cp": null,
+              "annotation": {
+                "text": "White is better",
+                "arrows": [],
+                "squares": []
+              }
             }
           ]
         }
@@ -1382,77 +3207,92 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppppp1pp/8/5p2/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "f5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppppp1pp/8/5p2/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppppp1pp/5n2/5p2/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppppp1pp/5n2/5p2/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppp2pp/4pn2/5p2/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppp2pp/4pn2/5p2/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 1 4",
               "move": "Nf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp3pp/4pn2/3p1p2/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 5",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp3pp/4pn2/3p1p2/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 1 5",
               "move": "Bd3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppp3pp/3bpn2/3p1p2/3P1B2/3BPN2/PPP2PPP/RN1QK2R w KQkq - 2 6",
               "move": "Bd6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqk2r/ppp3pp/3bpn2/3p1p2/3P4/3BPNB1/PPP2PPP/RN1QK2R b KQkq - 3 6",
               "move": "Bg3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp3pp/3bpn2/3p1p2/3P4/3BPNB1/PPP2PPP/RN1QK2R w KQ - 4 7",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/ppp3pp/3bpn2/3p1p2/3P4/3BPNB1/PPP2PPP/RN1Q1RK1 b - - 5 7",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/pp4pp/3bpn2/2pp1p2/3P4/3BPNB1/PPP2PPP/RN1Q1RK1 w - - 0 8",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbq1rk1/pp4pp/3bpn2/2pp1p2/3P4/2PBPNB1/PP3PPP/RN1Q1RK1 b - - 0 8",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             }
           ]
         },
@@ -1463,67 +3303,80 @@
             {
               "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
               "move": "d4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppppp1pp/8/5p2/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
               "move": "f5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkbnr/ppppp1pp/8/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2",
               "move": "Nf3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3",
               "move": "Nf6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppppp1pp/5n2/5p2/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3",
               "move": "Bf4",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppp2pp/4pn2/5p2/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4",
               "move": "e6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pppp2pp/4pn2/5p2/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
               "move": "e3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp3pp/4pn2/3p1p2/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 5",
               "move": "d5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/ppp3pp/4pn2/3p1p2/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 1 5",
               "move": "Bd3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp4pp/4pn2/2pp1p2/3P1B2/3BPN2/PPP2PPP/RN1QK2R w KQkq - 0 6",
               "move": "c5",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "rnbqkb1r/pp4pp/4pn2/2pp1p2/3P1B2/2PBPN2/PP3PPP/RN1QK2R b KQkq - 0 6",
               "move": "c3",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp4pp/2n1pn2/2pp1p2/3P1B2/2PBPN2/PP3PPP/RN1QK2R w KQkq - 1 7",
               "move": "Nc6",
-              "cp": null
+              "cp": null,
+              "annotation": null
             },
             {
               "fen": "r1bqkb1r/pp4pp/2n1pn2/2pp1p2/3P1B2/2PBPN2/PP3PPP/RN1Q1RK1 b kq - 2 7",
               "move": "O-O",
-              "cp": null
+              "cp": null,
+              "annotation": null
             }
           ]
         }

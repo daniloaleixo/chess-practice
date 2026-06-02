@@ -1,4 +1,4 @@
-import { parsePgnGames, extractChapterName, extractMainLine } from './build-studies.js'
+import { parsePgnGames, extractChapterName, extractMainLine, extractMoveAnnotations } from './build-studies.js'
 
 describe('parsePgnGames', () => {
   it('splits a PGN file with two games', () => {
@@ -53,5 +53,90 @@ describe('extractMainLine', () => {
     const positions = extractMainLine(pgn)
     expect(positions).toHaveLength(5)
     expect(positions[4].move).toBe('Nf3')
+  })
+})
+
+describe('extractMoveAnnotations', () => {
+  it('returns empty array for empty string', () => {
+    expect(extractMoveAnnotations('')).toEqual([])
+  })
+
+  it('returns null annotation for moves with no comments', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 Nf6 *'
+    const result = extractMoveAnnotations(pgn)
+    expect(result).toHaveLength(2)
+    expect(result[0]).toBeNull()
+    expect(result[1]).toBeNull()
+  })
+
+  it('attaches text comment to the correct move', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 Nf6 { Good move } 2. Bf4 *'
+    const result = extractMoveAnnotations(pgn)
+    // move 0: d4, move 1: Nf6, move 2: Bf4
+    expect(result[1]).toMatchObject({ text: 'Good move', arrows: [], squares: [] })
+    expect(result[0]).toBeNull()
+    expect(result[2]).toBeNull()
+  })
+
+  it('merges consecutive comment blocks for the same move', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 Nf6 { The text } { [%cal Rd4d5] } 2. Bf4 *'
+    const result = extractMoveAnnotations(pgn)
+    expect(result[1]).toMatchObject({
+      text: 'The text',
+      arrows: [{ from: 'd4', to: 'd5', color: 'red' }],
+      squares: [],
+    })
+  })
+
+  it('parses [%cal] arrows with color codes', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 { [%cal Ra1a8,Gb1b8,Yc1c8,Bd1d8] } *'
+    const result = extractMoveAnnotations(pgn)
+    expect(result[0]).toMatchObject({
+      text: null,
+      arrows: [
+        { from: 'a1', to: 'a8', color: 'red' },
+        { from: 'b1', to: 'b8', color: 'green' },
+        { from: 'c1', to: 'c8', color: 'yellow' },
+        { from: 'd1', to: 'd8', color: 'blue' },
+      ],
+      squares: [],
+    })
+  })
+
+  it('parses [%csl] squares with color codes', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 { [%csl Gd4,Re4] } *'
+    const result = extractMoveAnnotations(pgn)
+    expect(result[0]).toMatchObject({
+      text: null,
+      arrows: [],
+      squares: [
+        { square: 'd4', color: 'green' },
+        { square: 'e4', color: 'red' },
+      ],
+    })
+  })
+
+  it('strips variations before counting moves', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 d5 (1... Nf6 2. c4) { After d5 } 2. c4 *'
+    const result = extractMoveAnnotations(pgn)
+    // main line: d4 (0), d5 (1), c4 (2)
+    expect(result[1]).toMatchObject({ text: 'After d5' })
+    expect(result[2]).toBeNull()
+  })
+
+  it('returns null for a move with empty comment block', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 { } *'
+    const result = extractMoveAnnotations(pgn)
+    expect(result[0]).toBeNull()
+  })
+})
+
+describe('extractMainLine with annotations', () => {
+  it('includes annotation field on each position', () => {
+    const pgn = '[Event "Test"]\n\n1. d4 { White starts } Nf6 *'
+    const positions = extractMainLine(pgn)
+    expect(positions[0]).toHaveProperty('annotation')
+    expect(positions[0].annotation).toMatchObject({ text: 'White starts' })
+    expect(positions[1].annotation).toBeNull()
   })
 })
