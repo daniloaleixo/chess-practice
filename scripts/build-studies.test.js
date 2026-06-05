@@ -1,8 +1,7 @@
-import { parsePgnGames, extractChapterName, extractMainLine, extractMoveAnnotations, folderNameToChapterName } from './build-studies.js'
+import { parsePgnGames, extractChapterName, extractMainLine, extractMoveAnnotations, folderNameToChapterName, buildStudies } from './build-studies.js'
 import { mkdirSync, writeFileSync as fsWriteFileSync, mkdtempSync, rmSync, readFileSync as fsReadFileSync } from 'fs'
 import { tmpdir } from 'os'
 import path from 'path'
-import { buildStudies } from './build-studies.js'
 
 describe('parsePgnGames', () => {
   it('splits a PGN file with two games', () => {
@@ -251,5 +250,20 @@ describe('buildStudies (subdirectory mode)', () => {
     const written = JSON.parse(fsReadFileSync(outputPath, 'utf8'))
     expect(written).toHaveProperty('chapters')
     expect(written.chapters[0].id).toBe('benoni')
+  })
+
+  it('handles a PGN file containing multiple games as separate lines', () => {
+    const folderPath = path.join(studiesDir, 'benoni')
+    mkdirSync(folderPath)
+    fsWriteFileSync(
+      path.join(folderPath, 'multi.pgn'),
+      '[Event "T"]\n\n1. d4 Nf6 *\n\n[Event "T"]\n\n1. e4 e5 *'
+    )
+
+    const result = buildStudies(studiesDir, outputPath)
+
+    expect(result.chapters[0].lines).toHaveLength(2)
+    expect(result.chapters[0].lines[0].id).toBe('benoni-0')
+    expect(result.chapters[0].lines[1].id).toBe('benoni-1')
   })
 })

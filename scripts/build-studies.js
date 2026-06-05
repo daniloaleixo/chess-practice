@@ -151,13 +151,14 @@ export function buildStudies(
     let chapterName
     try {
       chapterName = readFileSync(path.join(folderPath, '_name.txt'), 'utf8').trim()
-    } catch {
+    } catch (e) {
+      if (e.code !== 'ENOENT') throw e
       chapterName = folderNameToChapterName(folderId)
     }
 
     const pgnFiles = readdirSync(folderPath)
       .filter(f => f.endsWith('.pgn'))
-      .sort()
+      .sort((a, b) => a.localeCompare(b))
 
     if (pgnFiles.length === 0) continue
 
@@ -166,10 +167,15 @@ export function buildStudies(
       const content = readFileSync(path.join(folderPath, file), 'utf8')
       const games = parsePgnGames(content)
       for (const pgn of games) {
+        const positions = extractMainLine(pgn)
+        if (positions.length === 0) {
+          console.warn(`  Skipping line with no positions in ${file}`)
+          continue
+        }
         lines.push({
           id: `${folderId}-${lines.length}`,
           pgn: pgn.replace(/\n+/g, ' ').trim(),
-          positions: extractMainLine(pgn),
+          positions,
         })
       }
     }
