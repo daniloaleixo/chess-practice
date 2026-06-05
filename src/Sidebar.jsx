@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect, getUnlockedDepth, chunkSettings, setChunkSettings, currentAnnotation }) {
+export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect, getUnlockedDepth, chunkSettings, setChunkSettings }) {
   const [settingsOpen, setSettingsOpen] = useState(false)
 
   return (
@@ -32,13 +32,6 @@ export function Sidebar({ chapters, getMasteredCount, activeChapterId, onSelect,
           </div>
         )
       })}
-
-      {chunkSettings.showAnnotations && currentAnnotation?.text && (
-        <div className="annotation-text">
-          <div className="annotation-text-label">Annotation</div>
-          <p className="annotation-text-body">{currentAnnotation.text}</p>
-        </div>
-      )}
 
       <div className="chunk-settings">
         <button

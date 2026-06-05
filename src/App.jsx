@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { PracticeBoard } from './PracticeBoard'
 import { Sidebar } from './Sidebar'
 import { useProgress } from './useProgress'
@@ -7,19 +7,10 @@ export default function App() {
   const [chapters, setChapters] = useState(null)
   const [activeChapterId, setActiveChapterId] = useState(null)
   const [error, setError] = useState(null)
-  const [currentAnnotation, setCurrentAnnotation] = useState(null)
   const {
     getMasteredCount, getScore, setScore,
     chunkSettings, getUnlockedDepth, recordCorrectAtDepth, setChunkSettings,
   } = useProgress()
-
-  const onAnnotationChange = useCallback((annotation) => {
-    setCurrentAnnotation(annotation)
-  }, [])
-
-  useEffect(() => {
-    setCurrentAnnotation(null)
-  }, [activeChapterId])
 
   useEffect(() => {
     fetch('/studies-with-eval.json')
@@ -54,7 +45,6 @@ export default function App() {
           getUnlockedDepth={getUnlockedDepth}
           chunkSettings={chunkSettings}
           setChunkSettings={setChunkSettings}
-          currentAnnotation={currentAnnotation}
         />
         <main className="app-main">
           <PracticeBoard
@@ -64,7 +54,6 @@ export default function App() {
             setScore={setScore}
             unlockedDepth={unlockedDepth}
             recordCorrectAtDepth={recordCorrectAtDepth}
-            onAnnotationChange={onAnnotationChange}
             showAnnotations={showAnnotations}
           />
         </main>

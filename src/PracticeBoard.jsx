@@ -11,7 +11,7 @@ const ANNOTATION_COLOR_MAP = {
   blue: 'rgba(0, 0, 255, 0.4)',
 }
 
-export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, recordCorrectAtDepth, onAnnotationChange, showAnnotations }) {
+export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, recordCorrectAtDepth, showAnnotations }) {
   const [startFromChunk, setStartFromChunk] = useState(false)
   const {
     fen,
@@ -41,10 +41,6 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
     prevStartFromChunk.current = startFromChunk
     restartCurrentLineRef.current()
   }, [startFromChunk])
-
-  useEffect(() => {
-    onAnnotationChange?.(currentAnnotation)
-  }, [currentAnnotation, onAnnotationChange])
 
   const tryMove = useCallback((sourceSquare, targetSquare) => {
     if (!isUserTurn || lockedRef.current) return false
@@ -189,6 +185,13 @@ export function PracticeBoard({ chapter, getScore, setScore, unlockedDepth, reco
           {newlyUnlockedDepth.from === newlyUnlockedDepth.to
             ? `Move ${newlyUnlockedDepth.to} unlocked!`
             : `Moves ${newlyUnlockedDepth.from} & ${newlyUnlockedDepth.to} unlocked!`}
+        </div>
+      )}
+
+      {showAnnotations && currentAnnotation?.text && (
+        <div className="annotation-text">
+          <div className="annotation-text-label">Annotation</div>
+          <p className="annotation-text-body">{currentAnnotation.text}</p>
         </div>
       )}
     </div>
