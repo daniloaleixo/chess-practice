@@ -1,4 +1,4 @@
-import { parsePgnGames, extractChapterName, extractMainLine, extractMoveAnnotations } from './build-studies.js'
+import { parsePgnGames, extractChapterName, extractMainLine, extractMoveAnnotations, folderNameToChapterName } from './build-studies.js'
 
 describe('parsePgnGames', () => {
   it('splits a PGN file with two games', () => {
@@ -144,5 +144,19 @@ describe('extractMainLine with annotations', () => {
     expect(positions[0]).toHaveProperty('annotation')
     expect(positions[0].annotation).toMatchObject({ text: 'White starts' })
     expect(positions[1].annotation).toBeNull()
+  })
+})
+
+describe('folderNameToChapterName', () => {
+  it('title-cases a single word', () => {
+    expect(folderNameToChapterName('benoni')).toBe('Benoni')
+  })
+
+  it('title-cases each hyphen-separated word', () => {
+    expect(folderNameToChapterName('kings-indian')).toBe('Kings Indian')
+  })
+
+  it('handles a number segment', () => {
+    expect(folderNameToChapterName('london-vs-d5')).toBe('London Vs D5')
   })
 })

@@ -131,6 +131,13 @@ function toChapterId(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 }
 
+export function folderNameToChapterName(folderName) {
+  return folderName
+    .split('-')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+}
+
 export function buildStudies(
   studiesDir = path.join(__dirname, '..', 'studies'),
   outputPath = path.join(__dirname, '..', 'public', 'studies.json')
