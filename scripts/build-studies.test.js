@@ -1,4 +1,8 @@
 import { parsePgnGames, extractChapterName, extractMainLine, extractMoveAnnotations, folderNameToChapterName } from './build-studies.js'
+import { mkdirSync, writeFileSync as fsWriteFileSync, mkdtempSync, rmSync, readFileSync as fsReadFileSync } from 'fs'
+import { tmpdir } from 'os'
+import path from 'path'
+import { buildStudies } from './build-studies.js'
 
 describe('parsePgnGames', () => {
   it('splits a PGN file with two games', () => {
@@ -158,5 +162,94 @@ describe('folderNameToChapterName', () => {
 
   it('handles an alphanumeric segment like d5', () => {
     expect(folderNameToChapterName('london-vs-d5')).toBe('London Vs D5')
+  })
+})
+
+describe('buildStudies (subdirectory mode)', () => {
+  let studiesDir, outputPath
+
+  beforeEach(() => {
+    studiesDir = mkdtempSync(path.join(tmpdir(), 'chess-test-'))
+    outputPath = path.join(studiesDir, 'out.json')
+  })
+
+  afterEach(() => {
+    rmSync(studiesDir, { recursive: true, force: true })
+  })
+
+  it('groups all PGN files in a subfolder into one chapter', () => {
+    const folderPath = path.join(studiesDir, 'benoni')
+    mkdirSync(folderPath)
+    fsWriteFileSync(path.join(folderPath, 'a.pgn'), '[Event "T"]\n\n1. d4 Nf6 *')
+    fsWriteFileSync(path.join(folderPath, 'b.pgn'), '[Event "T"]\n\n1. e4 e5 *')
+
+    const result = buildStudies(studiesDir, outputPath)
+
+    expect(result.chapters).toHaveLength(1)
+    expect(result.chapters[0].id).toBe('benoni')
+    expect(result.chapters[0].name).toBe('Benoni')
+    expect(result.chapters[0].lines).toHaveLength(2)
+    expect(result.chapters[0].lines[0].id).toBe('benoni-0')
+    expect(result.chapters[0].lines[1].id).toBe('benoni-1')
+  })
+
+  it('uses _name.txt for display name when present', () => {
+    const folderPath = path.join(studiesDir, 'benoni')
+    mkdirSync(folderPath)
+    fsWriteFileSync(path.join(folderPath, '_name.txt'), 'London vs Benoni\n')
+    fsWriteFileSync(path.join(folderPath, 'line.pgn'), '[Event "T"]\n\n1. d4 Nf6 *')
+
+    const result = buildStudies(studiesDir, outputPath)
+
+    expect(result.chapters[0].name).toBe('London vs Benoni')
+  })
+
+  it('creates separate chapters for separate subfolders', () => {
+    for (const name of ['benoni', 'benko']) {
+      const folderPath = path.join(studiesDir, name)
+      mkdirSync(folderPath)
+      fsWriteFileSync(path.join(folderPath, 'line.pgn'), '[Event "T"]\n\n1. d4 Nf6 *')
+    }
+
+    const result = buildStudies(studiesDir, outputPath)
+
+    expect(result.chapters).toHaveLength(2)
+    expect(result.chapters.map(c => c.id)).toEqual(['benko', 'benoni'])
+  })
+
+  it('loads PGN files alphabetically within a folder', () => {
+    const folderPath = path.join(studiesDir, 'test')
+    mkdirSync(folderPath)
+    fsWriteFileSync(path.join(folderPath, 'b.pgn'), '[Event "T"]\n\n1. e4 e5 *')
+    fsWriteFileSync(path.join(folderPath, 'a.pgn'), '[Event "T"]\n\n1. d4 d5 *')
+
+    const result = buildStudies(studiesDir, outputPath)
+
+    expect(result.chapters[0].lines[0].positions[0].move).toBe('d4') // a.pgn first
+    expect(result.chapters[0].lines[1].positions[0].move).toBe('e4') // b.pgn second
+  })
+
+  it('skips folders with no PGN files', () => {
+    mkdirSync(path.join(studiesDir, 'empty'))
+    const folderPath = path.join(studiesDir, 'benoni')
+    mkdirSync(folderPath)
+    fsWriteFileSync(path.join(folderPath, 'line.pgn'), '[Event "T"]\n\n1. d4 Nf6 *')
+
+    const result = buildStudies(studiesDir, outputPath)
+
+    expect(result.chapters).toHaveLength(1)
+    expect(result.chapters[0].id).toBe('benoni')
+  })
+
+  it('writes valid JSON to the output path', () => {
+    const folderPath = path.join(studiesDir, 'benoni')
+    mkdirSync(folderPath)
+    fsWriteFileSync(path.join(folderPath, 'line.pgn'), '[Event "T"]\n\n1. d4 Nf6 *')
+
+    buildStudies(studiesDir, outputPath)
+
+    const written = JSON.parse(fsReadFileSync(outputPath, 'utf8'))
+    expect(written).toHaveProperty('chapters')
+    expect(written.chapters[0].id).toBe('benoni')
   })
 })

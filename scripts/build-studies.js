@@ -1,6 +1,6 @@
 import { Chess } from 'chess.js'
 import { readdirSync, readFileSync, writeFileSync } from 'fs'
-import path, { basename } from 'path'
+import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -127,10 +127,6 @@ export function extractMainLine(pgnText) {
   })
 }
 
-function toChapterId(name) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-}
-
 export function folderNameToChapterName(folderName) {
   return folderName
     .split('-')
@@ -142,24 +138,44 @@ export function buildStudies(
   studiesDir = path.join(__dirname, '..', 'studies'),
   outputPath = path.join(__dirname, '..', 'public', 'studies.json')
 ) {
-  const files = readdirSync(studiesDir).filter(f => f.endsWith('.pgn')).sort()
+  const entries = readdirSync(studiesDir, { withFileTypes: true })
+    .filter(e => e.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name))
+
   const chapters = []
 
-  for (const file of files) {
-    const content = readFileSync(path.join(studiesDir, file), 'utf8')
-    const games = parsePgnGames(content)
-    if (games.length === 0) continue
+  for (const entry of entries) {
+    const folderPath = path.join(studiesDir, entry.name)
+    const folderId = entry.name
 
-    const chapterName = extractChapterName(games[0], basename(file, '.pgn'))
-    const chapterId = toChapterId(chapterName)
+    let chapterName
+    try {
+      chapterName = readFileSync(path.join(folderPath, '_name.txt'), 'utf8').trim()
+    } catch {
+      chapterName = folderNameToChapterName(folderId)
+    }
 
-    const lines = games.map((pgn, i) => ({
-      id: `${chapterId}-${i}`,
-      pgn: pgn.replace(/\n+/g, ' ').trim(),
-      positions: extractMainLine(pgn),
-    }))
+    const pgnFiles = readdirSync(folderPath)
+      .filter(f => f.endsWith('.pgn'))
+      .sort()
 
-    chapters.push({ id: chapterId, name: chapterName, lines })
+    if (pgnFiles.length === 0) continue
+
+    const lines = []
+    for (const file of pgnFiles) {
+      const content = readFileSync(path.join(folderPath, file), 'utf8')
+      const games = parsePgnGames(content)
+      for (const pgn of games) {
+        lines.push({
+          id: `${folderId}-${lines.length}`,
+          pgn: pgn.replace(/\n+/g, ' ').trim(),
+          positions: extractMainLine(pgn),
+        })
+      }
+    }
+
+    if (lines.length === 0) continue
+    chapters.push({ id: folderId, name: chapterName, lines })
   }
 
   writeFileSync(outputPath, JSON.stringify({ chapters }, null, 2))
