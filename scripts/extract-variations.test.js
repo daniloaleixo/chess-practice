@@ -45,4 +45,12 @@ describe('extractAllLeafPaths', () => {
     expect(leaves).toHaveLength(1)
     expect(leaves[0]).toEqual(['e4', 'e5'])
   })
+
+  it('handles multiple sibling variations off the same move', () => {
+    const pgn = '[Event "T"]\n\n1. d4 (1. e4 e5) (1. c4 c5) 1... d5 *'
+    const leaves = extractAllLeafPaths(pgn)
+    expect(leaves).toHaveLength(2)
+    expect(leaves[0]).toEqual(['e4', 'e5'])
+    expect(leaves[1]).toEqual(['c4', 'c5'])
+  })
 })

@@ -29,12 +29,13 @@ function walkTokens(tokens, startIdx, prefix) {
   while (i < tokens.length) {
     const tok = tokens[i]
     if (tok === '(') {
+      // drop the last move: the variation replaces it
       const varPrefix = path.slice(0, -1)
       const [subPaths, nextI] = walkTokens(tokens, i + 1, varPrefix)
       paths.push(...subPaths)
       i = nextI
     } else if (tok === ')') {
-      paths.push(path)
+      if (path.length > 0) paths.push(path)
       return [paths, i + 1]
     } else {
       path = [...path, tok]
