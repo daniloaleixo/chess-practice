@@ -113,3 +113,24 @@ export function extractVariations(pgnFilePath) {
 
   return written
 }
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const pgnPath = process.argv[2]
+  if (!pgnPath) {
+    console.error('Usage: node scripts/extract-variations.js <path-to-pgn-file>')
+    process.exit(1)
+  }
+
+  try {
+    const written = extractVariations(path.resolve(pgnPath))
+    if (written.length === 0) {
+      console.log('No variations found — nothing written.')
+    } else {
+      console.log(`Wrote ${written.length} variation file(s):`)
+      written.forEach(f => console.log('  ' + path.relative(process.cwd(), f)))
+    }
+  } catch (err) {
+    console.error(`Error: ${err.message}`)
+    process.exit(1)
+  }
+}
