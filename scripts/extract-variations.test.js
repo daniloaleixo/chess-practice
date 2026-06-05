@@ -1,4 +1,7 @@
-import { extractAllLeafPaths } from './extract-variations.js'
+import { extractAllLeafPaths, formatLeafAsPgn, extractVariations } from './extract-variations.js'
+import { mkdtempSync, rmSync, readdirSync, readFileSync as fsReadFileSync, writeFileSync as fsWriteFileSync } from 'fs'
+import { tmpdir } from 'os'
+import path from 'path'
 
 describe('extractAllLeafPaths', () => {
   it('returns empty array for a PGN with no variations', () => {
@@ -52,5 +55,81 @@ describe('extractAllLeafPaths', () => {
     expect(leaves).toHaveLength(2)
     expect(leaves[0]).toEqual(['e4', 'e5'])
     expect(leaves[1]).toEqual(['c4', 'c5'])
+  })
+})
+
+describe('formatLeafAsPgn', () => {
+  it('formats a move array with correct move numbers', () => {
+    const result = formatLeafAsPgn(['[Event "T"]'], ['d4', 'Nf6', 'Bf4'])
+    expect(result).toContain('1. d4 Nf6 2. Bf4 *')
+  })
+
+  it('preserves header lines from the source PGN', () => {
+    const headers = ['[Event "Test"]', '[Date "2025.01.01"]']
+    const result = formatLeafAsPgn(headers, ['e4'])
+    expect(result).toContain('[Event "Test"]')
+    expect(result).toContain('[Date "2025.01.01"]')
+  })
+
+  it('handles a path with white and black moves', () => {
+    const result = formatLeafAsPgn(['[Event "T"]'], ['d4', 'e5', 'c4'])
+    expect(result).toContain('1. d4 e5 2. c4 *')
+  })
+})
+
+describe('extractVariations', () => {
+  let tmpDir
+
+  beforeEach(() => {
+    tmpDir = mkdtempSync(path.join(tmpdir(), 'chess-var-test-'))
+  })
+
+  afterEach(() => {
+    rmSync(tmpDir, { recursive: true, force: true })
+  })
+
+  it('writes one _var_N.pgn file per leaf variation', () => {
+    const pgn = '[Event "T"]\n\n1. d4 (1. e4 e5) (1. c4 c5) 1... d5 *'
+    const src = path.join(tmpDir, 'study.pgn')
+    fsWriteFileSync(src, pgn)
+
+    extractVariations(src)
+
+    const files = readdirSync(tmpDir).filter(f => f.includes('_var_'))
+    expect(files).toHaveLength(2)
+    expect(files).toContain('study_var_1.pgn')
+    expect(files).toContain('study_var_2.pgn')
+  })
+
+  it('written PGN contains the correct moves', () => {
+    const pgn = '[Event "T"]\n\n1. d4 (1. e4 e5) 1... d5 *'
+    const src = path.join(tmpDir, 'study.pgn')
+    fsWriteFileSync(src, pgn)
+
+    extractVariations(src)
+
+    const content = fsReadFileSync(path.join(tmpDir, 'study_var_1.pgn'), 'utf8')
+    expect(content).toContain('1. e4 e5 *')
+  })
+
+  it('writes nothing and returns empty array when there are no variations', () => {
+    const pgn = '[Event "T"]\n\n1. d4 d5 *'
+    const src = path.join(tmpDir, 'study.pgn')
+    fsWriteFileSync(src, pgn)
+
+    const result = extractVariations(src)
+
+    expect(result).toEqual([])
+    const files = readdirSync(tmpDir).filter(f => f.includes('_var_'))
+    expect(files).toHaveLength(0)
+  })
+
+  it('throws if any _var_ files already exist in the directory', () => {
+    const pgn = '[Event "T"]\n\n1. d4 (1. e4 e5) 1... d5 *'
+    const src = path.join(tmpDir, 'study.pgn')
+    fsWriteFileSync(src, pgn)
+    fsWriteFileSync(path.join(tmpDir, 'study_var_1.pgn'), 'stale content')
+
+    expect(() => extractVariations(src)).toThrow(/existing variation files/)
   })
 })
