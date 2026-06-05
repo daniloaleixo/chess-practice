@@ -13,16 +13,6 @@ export function parsePgnGames(content) {
     .filter(s => s.includes('[') && s.match(/\d+\./))
 }
 
-export function extractChapterName(pgnText, filename) {
-  const match = pgnText.match(/\[Event "([^"]+)"\]/)
-  const name = match?.[1]
-  if (name && name !== '?') return name
-  return filename
-    .split('-')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ')
-}
-
 function removeVariations(text) {
   let result = ''
   let depth = 0

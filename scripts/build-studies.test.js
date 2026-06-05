@@ -1,4 +1,4 @@
-import { parsePgnGames, extractChapterName, extractMainLine, extractMoveAnnotations, folderNameToChapterName, buildStudies } from './build-studies.js'
+import { parsePgnGames, extractMainLine, extractMoveAnnotations, folderNameToChapterName, buildStudies } from './build-studies.js'
 import { mkdirSync, writeFileSync as fsWriteFileSync, mkdtempSync, rmSync, readFileSync as fsReadFileSync } from 'fs'
 import { tmpdir } from 'os'
 import path from 'path'
@@ -15,23 +15,6 @@ describe('parsePgnGames', () => {
   it('returns a single-element array when file has one game', () => {
     const content = '[Event "Game 1"]\n\n1. d4 d5 *'
     expect(parsePgnGames(content)).toHaveLength(1)
-  })
-})
-
-describe('extractChapterName', () => {
-  it('extracts name from [Event] tag', () => {
-    const pgn = '[Event "London vs Dutch"]\n\n1. d4 f5 *'
-    expect(extractChapterName(pgn, 'irrelevant')).toBe('London vs Dutch')
-  })
-
-  it('falls back to filename when Event tag is absent', () => {
-    const pgn = '[Site "?"]\n\n1. d4 f5 *'
-    expect(extractChapterName(pgn, 'london-vs-dutch')).toBe('London Vs Dutch')
-  })
-
-  it('falls back to filename when Event tag is "?"', () => {
-    const pgn = '[Event "?"]\n\n1. d4 f5 *'
-    expect(extractChapterName(pgn, 'london-vs-kid')).toBe('London Vs Kid')
   })
 })
 
