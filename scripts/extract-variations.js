@@ -70,6 +70,7 @@ function extractHeaders(pgnText) {
 
 export function formatLeafAsPgn(headers, moves) {
   const parts = []
+  // assumes moves[0] is White's first move; index 0,2,4… = White
   moves.forEach((move, i) => {
     if (i % 2 === 0) parts.push(`${Math.floor(i / 2) + 1}.`)
     parts.push(move)

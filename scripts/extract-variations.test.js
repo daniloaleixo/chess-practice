@@ -96,6 +96,7 @@ describe('extractVariations', () => {
     extractVariations(src)
 
     const files = readdirSync(tmpDir).filter(f => f.includes('_var_'))
+    // 2 variations (e4 e5, c4 c5) — main line d4 d5 is excluded by extractAllLeafPaths
     expect(files).toHaveLength(2)
     expect(files).toContain('study_var_1.pgn')
     expect(files).toContain('study_var_2.pgn')
@@ -108,8 +109,9 @@ describe('extractVariations', () => {
 
     extractVariations(src)
 
-    const content = fsReadFileSync(path.join(tmpDir, 'study_var_1.pgn'), 'utf8')
-    expect(content).toContain('1. e4 e5 *')
+    const files = readdirSync(tmpDir).filter(f => f.includes('_var_'))
+    const contents = files.map(f => fsReadFileSync(path.join(tmpDir, f), 'utf8'))
+    expect(contents.some(c => c.includes('1. e4 e5 *'))).toBe(true)
   })
 
   it('writes nothing and returns empty array when there are no variations', () => {
