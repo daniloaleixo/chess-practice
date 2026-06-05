@@ -134,4 +134,22 @@ describe('extractVariations', () => {
 
     expect(() => extractVariations(src)).toThrow(/existing variation files/)
   })
+
+  it('handles a multi-game PGN file and extracts variations from each game', () => {
+    // Two games: first has 1 variation, second has 1 variation
+    const pgn = [
+      '[Event "Game 1"]\n\n1. d4 (1. e4 e5) 1... d5 *',
+      '[Event "Game 2"]\n\n1. c4 (1. Nf3 Nf6) 1... c5 *',
+    ].join('\n\n')
+    const src = path.join(tmpDir, 'multi.pgn')
+    fsWriteFileSync(src, pgn)
+
+    const written = extractVariations(src)
+
+    // 2 variations total (one per game), numbered sequentially
+    expect(written).toHaveLength(2)
+    const allContents = written.map(f => fsReadFileSync(f, 'utf8'))
+    expect(allContents.some(c => c.includes('1. e4 e5 *'))).toBe(true)
+    expect(allContents.some(c => c.includes('1. Nf3 Nf6 *'))).toBe(true)
+  })
 })
