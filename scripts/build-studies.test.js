@@ -156,7 +156,7 @@ describe('folderNameToChapterName', () => {
     expect(folderNameToChapterName('kings-indian')).toBe('Kings Indian')
   })
 
-  it('handles a number segment', () => {
+  it('handles an alphanumeric segment like d5', () => {
     expect(folderNameToChapterName('london-vs-d5')).toBe('London Vs D5')
   })
 })
