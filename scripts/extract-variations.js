@@ -1,10 +1,3 @@
-import { readdirSync, readFileSync, writeFileSync } from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-import { parsePgnGames } from './build-studies.js'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-
 function stripHeaders(pgnText) {
   const lines = pgnText.replace(/\r\n/g, '\n').split('\n')
   let pastHeaders = false
