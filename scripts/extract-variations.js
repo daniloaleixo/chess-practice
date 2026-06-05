@@ -28,27 +28,27 @@ function tokenize(body) {
 
 function walkTokens(tokens, startIdx, prefix) {
   const paths = []
-  let path = [...prefix]
+  let moves = [...prefix]
   let i = startIdx
 
   while (i < tokens.length) {
     const tok = tokens[i]
     if (tok === '(') {
       // drop the last move: the variation replaces it
-      const varPrefix = path.slice(0, -1)
+      const varPrefix = moves.slice(0, -1)
       const [subPaths, nextI] = walkTokens(tokens, i + 1, varPrefix)
       paths.push(...subPaths)
       i = nextI
     } else if (tok === ')') {
-      if (path.length > 0) paths.push(path)
+      if (moves.length > 0) paths.push(moves)
       return [paths, i + 1]
     } else {
-      path = [...path, tok]
+      moves = [...moves, tok]
       i++
     }
   }
 
-  paths.push(path)
+  paths.push(moves)
   return [paths, i]
 }
 
