@@ -2425,84 +2425,479 @@
       ]
     },
     {
-      "id": "introduction",
-      "name": "Introduction",
-      "lines": [
-        {
-          "id": "introduction-0",
-          "pgn": "[Event \"🍄 Ideas in the London System 🍄: Introduction\"] [Date \"2018.03.22\"] [Result \"*\"] [Variant \"Standard\"] [ECO \"D00\"] [Opening \"Queen's Pawn Game: Accelerated London System\"] [StudyName \"🍄 Ideas in the London System 🍄\"] [ChapterName \"Introduction\"] [ChapterURL \"https://lichess.org/study/KjivNw7F/E9SccSB6\"] [Annotator \"https://lichess.org/@/FunnyAnimatorJimTV\"] [UTCDate \"2018.03.22\"] [UTCTime \"01:33:25\"] { Hi! You've probably heard about an opening for white called the London System. In this study, I will teach you the basics of this popular opening. ADVANCED PLAYERS -> see the final chapter. If you enjoy this study please click the heart button (under the h1 square). Thanks! Please check out my new 2022 study where I'm learning the Classical Sicilian https://lichess.org/study/nrGAXGfg Thank you! :) } 1. d4 { We will be starting with d4. It is not as aggressive as e4 can be but d4 is a good middleground between aggressive and solid games. To start off as an example I will show you the ideas where black plays 1...d5. 1...Nf6 is a popular choice as well. } { [%cal Bd7d5,Bg8f6] } 1... d5 2. Bf4 { This is the trademark move of the London Opening, where you play d4 and Bf4. The idea is to build a solid pyramid in the center with e3 and c3, and the bishop on f4 will be very well placed. This is as far as I will go for this chapter. In the next few chapters I will go into more detail on the ideas. PLEASE DON'T STOP HERE. Continue through the next 14 chapters (in the top left corner) Note: If you want to see a more advanced course on the London I highly recommend IM Alex Banzea's free London System playlist on youtube. He goes into detail about many of the modern move orders and more challenging ideas from black. } { [%csl Ge3,Gc3,Bf4][%cal Ge2e3,Gc2c3] } *",
-          "positions": [
-            {
-              "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
-              "move": "d4",
-              "cp": null,
-              "annotation": {
-                "text": "We will be starting with d4. It is not as aggressive as e4 can be but d4 is a good middleground between aggressive and solid games.\nTo start off as an example I will show you the ideas where black plays 1...d5. 1...Nf6 is a popular choice as well.",
-                "arrows": [
-                  {
-                    "from": "d7",
-                    "to": "d5",
-                    "color": "blue"
-                  },
-                  {
-                    "from": "g8",
-                    "to": "f6",
-                    "color": "blue"
-                  }
-                ],
-                "squares": []
-              }
-            },
-            {
-              "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
-              "move": "d5",
-              "cp": null,
-              "annotation": null
-            },
-            {
-              "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2",
-              "move": "Bf4",
-              "cp": null,
-              "annotation": {
-                "text": "This is the trademark move of the London Opening, where you play d4 and Bf4. The idea is to build a solid pyramid in the center with e3 and c3, and the bishop on f4 will be very well placed.\nThis is as far as I will go for this chapter. In the next few chapters I will go into more detail on the ideas.\nPLEASE DON'T STOP HERE. Continue through the next 14 chapters (in the top left corner)\nNote: If you want to see a more advanced course on the London I highly recommend IM Alex Banzea's free London System playlist on youtube. He goes into detail about many of the modern move orders and more challenging ideas from black.",
-                "arrows": [
-                  {
-                    "from": "e2",
-                    "to": "e3",
-                    "color": "green"
-                  },
-                  {
-                    "from": "c2",
-                    "to": "c3",
-                    "color": "green"
-                  }
-                ],
-                "squares": [
-                  {
-                    "square": "e3",
-                    "color": "green"
-                  },
-                  {
-                    "square": "c3",
-                    "color": "green"
-                  },
-                  {
-                    "square": "f4",
-                    "color": "blue"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "kings-indian",
       "name": "Kings Indian",
       "lines": [
         {
           "id": "kings-indian-0",
+          "pgn": "[Event \"🍄 Ideas in the London System 🍄: - Black plays King's Indian\"] [Date \"2018.03.22\"] [Result \"*\"] [Variant \"Standard\"] [ECO \"A45\"] [Opening \"Indian Defense: Accelerated London System\"] [StudyName \"🍄 Ideas in the London System 🍄\"] [ChapterName \"- Black plays King's Indian\"] [ChapterURL \"https://lichess.org/study/KjivNw7F/BP0eJEKK\"] [Annotator \"https://lichess.org/@/FunnyAnimatorJimTV\"] [UTCDate \"2018.03.22\"] [UTCTime \"01:55:55\"] 1. d4 Nf6 2. Bf4 d5 3. e3 *",
+          "positions": [
+            {
+              "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+              "move": "d4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
+              "move": "Nf6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
+              "move": "Bf4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
+              "move": "d5",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
+              "move": "e3",
+              "cp": null,
+              "annotation": null
+            }
+          ]
+        },
+        {
+          "id": "kings-indian-1",
+          "pgn": "[Event \"🍄 Ideas in the London System 🍄: - Black plays King's Indian\"] [Date \"2018.03.22\"] [Result \"*\"] [Variant \"Standard\"] [ECO \"A45\"] [Opening \"Indian Defense: Accelerated London System\"] [StudyName \"🍄 Ideas in the London System 🍄\"] [ChapterName \"- Black plays King's Indian\"] [ChapterURL \"https://lichess.org/study/KjivNw7F/BP0eJEKK\"] [Annotator \"https://lichess.org/@/FunnyAnimatorJimTV\"] [UTCDate \"2018.03.22\"] [UTCTime \"01:55:55\"] 1. d4 Nf6 2. Bf4 g6 3. Nc3 Bg7 4. e4 d6 5. Qd2 O-O 6. O-O-O Nbd7 7. Bh6 Bxh6 8. Qxh6 e5 9. Nf3 exd4 10. Nxd4 Re8 11. f3 *",
+          "positions": [
+            {
+              "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+              "move": "d4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
+              "move": "Nf6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
+              "move": "Bf4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
+              "move": "g6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3",
+              "move": "Nc3",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR w KQkq - 2 4",
+              "move": "Bg7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR b KQkq - 0 4",
+              "move": "e4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5",
+              "move": "d6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR b KQkq - 1 5",
+              "move": "Qd2",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR w KQ - 2 6",
+              "move": "O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR b - - 3 6",
+              "move": "O-O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR w - - 4 7",
+              "move": "Nbd7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnppbp/3p1npB/8/3PP3/2N5/PPPQ1PPP/2KR1BNR b - - 5 7",
+              "move": "Bh6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnpp1p/3p1npb/8/3PP3/2N5/PPPQ1PPP/2KR1BNR w - - 0 8",
+              "move": "Bxh6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnpp1p/3p1npQ/8/3PP3/2N5/PPP2PPP/2KR1BNR b - - 0 8",
+              "move": "Qxh6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppn1p1p/3p1npQ/4p3/3PP3/2N5/PPP2PPP/2KR1BNR w - - 0 9",
+              "move": "e5",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppn1p1p/3p1npQ/4p3/3PP3/2N2N2/PPP2PPP/2KR1B1R b - - 1 9",
+              "move": "Nf3",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppn1p1p/3p1npQ/8/3pP3/2N2N2/PPP2PPP/2KR1B1R w - - 0 10",
+              "move": "exd4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppn1p1p/3p1npQ/8/3NP3/2N5/PPP2PPP/2KR1B1R b - - 0 10",
+              "move": "Nxd4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bqr1k1/pppn1p1p/3p1npQ/8/3NP3/2N5/PPP2PPP/2KR1B1R w - - 1 11",
+              "move": "Re8",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bqr1k1/pppn1p1p/3p1npQ/8/3NP3/2N2P2/PPP3PP/2KR1B1R b - - 0 11",
+              "move": "f3",
+              "cp": null,
+              "annotation": null
+            }
+          ]
+        },
+        {
+          "id": "kings-indian-2",
+          "pgn": "[Event \"🍄 Ideas in the London System 🍄: - Black plays King's Indian\"] [Date \"2018.03.22\"] [Result \"*\"] [Variant \"Standard\"] [ECO \"A45\"] [Opening \"Indian Defense: Accelerated London System\"] [StudyName \"🍄 Ideas in the London System 🍄\"] [ChapterName \"- Black plays King's Indian\"] [ChapterURL \"https://lichess.org/study/KjivNw7F/BP0eJEKK\"] [Annotator \"https://lichess.org/@/FunnyAnimatorJimTV\"] [UTCDate \"2018.03.22\"] [UTCTime \"01:55:55\"] 1. d4 Nf6 2. Bf4 g6 3. Nc3 Bg7 4. e4 d6 5. Qd2 O-O 6. O-O-O Nbd7 7. Bh6 e5 8. Bxg7 Kxg7 9. dxe5 dxe5 10. f3 *",
+          "positions": [
+            {
+              "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+              "move": "d4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
+              "move": "Nf6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
+              "move": "Bf4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
+              "move": "g6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3",
+              "move": "Nc3",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR w KQkq - 2 4",
+              "move": "Bg7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR b KQkq - 0 4",
+              "move": "e4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5",
+              "move": "d6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR b KQkq - 1 5",
+              "move": "Qd2",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR w KQ - 2 6",
+              "move": "O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR b - - 3 6",
+              "move": "O-O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR w - - 4 7",
+              "move": "Nbd7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnppbp/3p1npB/8/3PP3/2N5/PPPQ1PPP/2KR1BNR b - - 5 7",
+              "move": "Bh6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppn1pbp/3p1npB/4p3/3PP3/2N5/PPPQ1PPP/2KR1BNR w - - 0 8",
+              "move": "e5",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppn1pBp/3p1np1/4p3/3PP3/2N5/PPPQ1PPP/2KR1BNR b - - 0 8",
+              "move": "Bxg7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1r2/pppn1pkp/3p1np1/4p3/3PP3/2N5/PPPQ1PPP/2KR1BNR w - - 0 9",
+              "move": "Kxg7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1r2/pppn1pkp/3p1np1/4P3/4P3/2N5/PPPQ1PPP/2KR1BNR b - - 0 9",
+              "move": "dxe5",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1r2/pppn1pkp/5np1/4p3/4P3/2N5/PPPQ1PPP/2KR1BNR w - - 0 10",
+              "move": "dxe5",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1r2/pppn1pkp/5np1/4p3/4P3/2N2P2/PPPQ2PP/2KR1BNR b - - 0 10",
+              "move": "f3",
+              "cp": null,
+              "annotation": null
+            }
+          ]
+        },
+        {
+          "id": "kings-indian-3",
+          "pgn": "[Event \"🍄 Ideas in the London System 🍄: - Black plays King's Indian\"] [Date \"2018.03.22\"] [Result \"*\"] [Variant \"Standard\"] [ECO \"A45\"] [Opening \"Indian Defense: Accelerated London System\"] [StudyName \"🍄 Ideas in the London System 🍄\"] [ChapterName \"- Black plays King's Indian\"] [ChapterURL \"https://lichess.org/study/KjivNw7F/BP0eJEKK\"] [Annotator \"https://lichess.org/@/FunnyAnimatorJimTV\"] [UTCDate \"2018.03.22\"] [UTCTime \"01:55:55\"] 1. d4 Nf6 2. Bf4 g6 3. Nc3 Bg7 4. e4 d6 5. Qd2 O-O 6. O-O-O Nbd7 7. Nf3 c5 8. dxc5 *",
+          "positions": [
+            {
+              "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+              "move": "d4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
+              "move": "Nf6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
+              "move": "Bf4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
+              "move": "g6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3",
+              "move": "Nc3",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR w KQkq - 2 4",
+              "move": "Bg7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR b KQkq - 0 4",
+              "move": "e4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5",
+              "move": "d6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR b KQkq - 1 5",
+              "move": "Qd2",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR w KQ - 2 6",
+              "move": "O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR b - - 3 6",
+              "move": "O-O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR w - - 4 7",
+              "move": "Nbd7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pppnppbp/3p1np1/8/3PPB2/2N2N2/PPPQ1PPP/2KR1B1R b - - 5 7",
+              "move": "Nf3",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pp1nppbp/3p1np1/2p5/3PPB2/2N2N2/PPPQ1PPP/2KR1B1R w - - 0 8",
+              "move": "c5",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "r1bq1rk1/pp1nppbp/3p1np1/2P5/4PB2/2N2N2/PPPQ1PPP/2KR1B1R b - - 0 8",
+              "move": "dxc5",
+              "cp": null,
+              "annotation": null
+            }
+          ]
+        },
+        {
+          "id": "kings-indian-4",
+          "pgn": "[Event \"🍄 Ideas in the London System 🍄: - Black plays King's Indian\"] [Date \"2018.03.22\"] [Result \"*\"] [Variant \"Standard\"] [ECO \"A45\"] [Opening \"Indian Defense: Accelerated London System\"] [StudyName \"🍄 Ideas in the London System 🍄\"] [ChapterName \"- Black plays King's Indian\"] [ChapterURL \"https://lichess.org/study/KjivNw7F/BP0eJEKK\"] [Annotator \"https://lichess.org/@/FunnyAnimatorJimTV\"] [UTCDate \"2018.03.22\"] [UTCTime \"01:55:55\"] 1. d4 Nf6 2. Bf4 g6 3. Nc3 Bg7 4. e4 d6 5. Qd2 O-O 6. O-O-O c6 7. Bh6 *",
+          "positions": [
+            {
+              "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+              "move": "d4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
+              "move": "Nf6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppppp/5n2/8/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2",
+              "move": "Bf4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3",
+              "move": "g6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqkb1r/pppppp1p/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3",
+              "move": "Nc3",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/2N5/PPP1PPPP/R2QKBNR w KQkq - 2 4",
+              "move": "Bg7",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppppppbp/5np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR b KQkq - 0 4",
+              "move": "e4",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5",
+              "move": "d6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR b KQkq - 1 5",
+              "move": "Qd2",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/R3KBNR w KQ - 2 6",
+              "move": "O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR b - - 3 6",
+              "move": "O-O-O",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/pp2ppbp/2pp1np1/8/3PPB2/2N5/PPPQ1PPP/2KR1BNR w - - 0 7",
+              "move": "c6",
+              "cp": null,
+              "annotation": null
+            },
+            {
+              "fen": "rnbq1rk1/pp2ppbp/2pp1npB/8/3PP3/2N5/PPPQ1PPP/2KR1BNR b - - 1 7",
+              "move": "Bh6",
+              "cp": null,
+              "annotation": null
+            }
+          ]
+        },
+        {
+          "id": "kings-indian-5",
           "pgn": "[Event \"🍄 Ideas in the London System 🍄: - Black plays King's Indian\"] [Date \"2018.03.22\"] [Result \"*\"] [Variant \"Standard\"] [ECO \"A45\"] [Opening \"Indian Defense: Accelerated London System\"] [StudyName \"🍄 Ideas in the London System 🍄\"] [ChapterName \"- Black plays King's Indian\"] [ChapterURL \"https://lichess.org/study/KjivNw7F/BP0eJEKK\"] [Annotator \"https://lichess.org/@/FunnyAnimatorJimTV\"] [UTCDate \"2018.03.22\"] [UTCTime \"01:55:55\"] { In this chapter I'll explain what to do if black plays the King's Indian Defense: that is with Nf6, g6, Bg7, d6 and 0-0. } { [%cal Gg8f6,Gg7g6,Gf8g7,Ge8g8,Gd7d6] } 1. d4 Nf6 2. Bf4 { Now at this point if black plays d5, we transpose back into our first chapters. But today we're going to talk about when black plays g6. } { [%cal Rd7d5] } 2... g6 { [%csl Gg6][%cal Gg7g6] } (2... d5 3. e3) 3. Nc3 { GOLDEN RULE #1: As soon as they go g6, you play Nc3. Why? Because we want to win in a very aggressive (not reckless) way. You'll see what I mean! :) Here if black is playing the King's Indian Defense, he'll play Bg7 quickly. But if your opponent plays the Grunfeld Defense or wants to stop our ambitions of playing e4, he may play d5. } { [%csl Gc3][%cal Gb1c3,Rg7g6,Bd7d5,Bf8g7] } 3... Bg7 { So if your opponent is a King's Indian Defense player and he just plays Bg7 quickly... } 4. e4 { *GOLDEN RULE* #2 And we play e4!! This is a bit similar to the 150 attack in the Pirc Defense, where we're going Qd2, 0-0-0 and going to attack black on the kingside. AND this opening has an added benefit over normal Pirc openings because black hasn't played d6 too early, so he can't go e5 too quickly. Our London Bishop keeps good control of the e5 square. } { [%csl Ge5,Ye4,Yd4][%cal Gd1d2,Ge1c1,Rd7d6,Re7e5,Gf4e5] } 4... d6 5. Qd2 { Planning to castle queenside and go Bh6, exchanging off this g7 bishop, a key piece } { [%csl Gg7][%cal Ge1c1,Gf4h6] } 5... O-O 6. O-O-O { Some of black's best moves are Nbd7 and Nc6, because both of these moves aim to at least create some central counterplay with e5. } { [%cal Bb8c6,Bb8d7,Be7e5] } 6... Nc6 { Here black is trying to play e5, so I think now we should stop this and go for CENTRAL CONTROL. } { [%csl Re5][%cal Re7e5] } (6... Nbd7 7. Nf3 (7. Bh6 e5 (7... Bxh6 8. Qxh6 e5 9. Nf3 exd4 10. Nxd4 Re8 11. f3 { [%cal Gg2g4,Gh2h4,Gh4h5] }) 8. Bxg7 Kxg7 9. dxe5 dxe5 10. f3) 7... c5 8. dxc5) (6... c6 7. Bh6) 7. Nf3 { *GOLDEN RULE* #3: DO your best to delay black from playing e5. } { [%csl Ge5][%cal Gf3e5] } 7... Bg4 { How do we stop e5 now? } { [%cal Rg4d1,Ge7e5] } 8. Qe3 { Qe3! The rook will be facing the queen on d8 } { [%cal Gd1d8,Ge7e5,Gd4e5,Gd6e5] } 8... Nd7 { Still trying to go e5. How do we stop e5 now?? } { [%csl Be5][%cal Rd7e5,Rc6e5,Rd6e5,Rg7e5,Be7e5] } 9. Bg5 { Pinning the e-pawn. Very clever! } { [%csl Re7][%cal Rg5d8] } 9... Qe8 { Trying really hard to enforce this move. And ONLY NOW that the queen has been misplaced to e8, do we go Bh6. } 10. Bh6 { Swapping off this key defensive bishop. } { [%csl Rg7,Gf8][%cal Rh6f8] } 10... Bxf3 11. gxf3 e5 12. Bxg7 Kxg7 13. dxe5 Qxe5 14. Nd5 { And white is in total control. The f and h pawns are ready to storm up the board. Plus we removed that important g7 bishop. Imagine if black had that dark squared bishop now! He'd be having brilliant influence across to b2, and his king would be well defended. } { [%csl Rg7][%cal Gf3f4,Gf4f5,Gh2h4,Gh4h5,Rg7b2] } *",
           "positions": [
             {
